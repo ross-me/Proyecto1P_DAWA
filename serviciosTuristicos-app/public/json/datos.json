@@ -62,5 +62,61 @@
         "title": "David",
         "genre": "M"
       }
+    ],
+    "actividades": [
+        {
+            "id": "1",
+            "name": "Caminata al Quilotoa",
+            "description": "Disfruta de una caminata por los alrededores de la laguna del Quilotoa, famosa por sus aguas turquesas y paisajes impresionantes.",
+            "category": "Aventura",
+            "raiting": true,
+            "image": "https://www.google.com/imgres?q=caminata%20al%20quilotoa&imgurl=https%3A%2F%2Fadviceperu.com%2Fwp-content%2Fuploads%2F2017%2F06%2Ftrekking-quilotoa-crater-lake-450x265.jpg&imgrefurl=https%3A%2F%2Fadviceperu.com%2Fes%2Fecuador-caminata-la-avenida-los-volcanes-8-dias.html&docid=CZHjVPStAkEdKM&tbnid=zIrFighXmIiY3M&vet=12ahUKEwjfxfuZ-OSJAxWNSzABHT56JEwQM3oECBoQAA..i&w=450&h=265&hcb=2&ved=2ahUKEwjfxfuZ-OSJAxWNSzABHT56JEwQM3oECBoQAA",
+            "price": 30.00
+        },
+        {
+            "id": "2",
+            "name": "Descenso en bicicleta desde el Cotopaxi",
+            "description": "Atrévete a descender en bicicleta desde las faldas del volcán Cotopaxi, pasando por paisajes únicos.",
+            "category": "Aventura",
+            "raiting": false,
+            "image": "https://www.google.com/imgres?q=cotopaxi%20bicicleta&imgurl=https%3A%2F%2Fwww.imagineecuador.com%2Fwp-content%2Fuploads%2F2021%2F11%2FRecurso-119.png&imgrefurl=https%3A%2F%2Fwww.imagineecuador.com%2Fes%2Fcotopaxi-trekking-ciclismo-tours%2F&docid=IkbFbux_5vvsrM&tbnid=1ME-yMS8K8AEdM&vet=12ahUKEwjd36zL-eSJAxVxkIQIHRI0NlYQM3oECHMQAA..i&w=1200&h=687&hcb=2&ved=2ahUKEwjd36zL-eSJAxVxkIQIHRI0NlYQM3oECHMQAA",
+            "price": 50.00
+        },
+        {
+            "id": "3",
+            "name": "Recorrido por el centro histórico de Quito",
+            "description": "Explora iglesias coloniales, plazas y monumentos en el centro histórico mejor preservado de América Latina.",
+            "category": "Cultural",
+            "raiting": true,
+            "image": "https://www.google.com/imgres?q=centro%20hist%C3%B3rico%20de%20Quito&imgurl=https%3A%2F%2Fvistahermosa.ec%2Fwp-content%2Fuploads%2F2015%2F07%2Fblog1_vista_hermosa_centro_quito_historico.jpg&imgrefurl=https%3A%2F%2Fvistahermosa.ec%2Fcentro-historico-colonial-de-quito%2F&docid=qkY3jY4rF00FrM&tbnid=OGN9cLSp7icenM&vet=12ahUKEwjwsNP_-eSJAxXHRjABHZvJFgIQM3oECH4QAA..i&w=1600&h=1200&hcb=2&ved=2ahUKEwjwsNP_-eSJAxXHRjABHZvJFgIQM3oECH4QAA",
+            "price": 20.00
+        },
+        {
+            "id": "4",
+            "name": "Clase de elaboración de sombreros de paja toquilla",
+            "description": "Aprende de artesanos locales cómo se elaboran los famosos sombreros de Montecristi, patrimonio cultural de Ecuador.",
+            "category": "Cultural",
+            "raiting": true,
+            "image": "https://www.google.com/imgres?q=elaboraci%C3%B3n%20de%20sombreros%20de%20paja%20toquilla&imgurl=https%3A%2F%2Flodijeron.wordpress.com%2Fwp-content%2Fuploads%2F2010%2F12%2Ffoto-2-los-conocimientos-del-tejido-son-transferidos-a-los-hijos.jpg&imgrefurl=https%3A%2F%2Flodijeron.wordpress.com%2F2010%2F12%2F15%2Fmemoria-historica-de-elaboracion-del-sombrero-fino-de-paja-toquilla%2F&docid=3Uc8VnTUZwfzwM&tbnid=3xMcixkPqEZz0M&vet=12ahUKEwjPgOGg-uSJAxV_SDABHb6rMqUQM3oECBUQAA..i&w=1024&h=683&hcb=2&ved=2ahUKEwjPgOGg-uSJAxV_SDABHb6rMqUQM3oECBUQAA",
+            "price": 25.00
+        },
+        {
+            "id": "5",
+            "name": "Avistamiento de ballenas en Puerto López",
+            "description": "Vive una experiencia única al observar ballenas jorobadas en su hábitat natural durante la temporada migratoria.",
+            "category": "Aventura",
+            "raiting": true,
+            "image": "https://www.google.com/imgres?q=Avistamiento%20de%20ballenas%20en%20Puerto%20L%C3%B3pez&imgurl=https%3A%2F%2Fwww.eluniverso.com%2Fresizer%2Fv2%2FT5SOLRJSENBAZG3EVIPXPT7WYI.jpg%3Fauth%3D7e7e356d325055b020a091b51ef4745635a0bd55185ca578a3a1eb309c2f0148%26width%3D700%26height%3D395%26quality%3D75%26smart%3Dtrue&imgrefurl=https%3A%2F%2Fwww.eluniverso.com%2Fnoticias%2Fecuador%2Fpuerto-lopez-espera-40000-visitantes-y-al-menos-2-millones-durante-la-temporada-de-ballenas-nota%2F&docid=2aLn-O6W2XYIuM&tbnid=diKpq3Yy6QtBsM&vet=12ahUKEwjT8qW--uSJAxXrSjABHfD7BxIQM3oFCIABEAA..i&w=700&h=395&hcb=2&ved=2ahUKEwjT8qW--uSJAxXrSjABHfD7BxIQM3oFCIABEAA",
+            "price": 35.00
+        },
+        {
+            "id": "6",
+            "name": "Taller de danza folklórica ecuatoriana",
+            "description": "Sumérgete en la tradición cultural aprendiendo pasos básicos de los bailes típicos de las diferentes regiones del país.",
+            "category": "Cultural",
+            "raiting": true,
+            "image": "https://www.google.com/imgres?q=danza%20folkl%C3%B3rica%20ecuatoriana&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D102202161679550&imgrefurl=https%3A%2F%2Fwww.facebook.com%2FCochaWarmi%2Fphotos%2Fa.102202508346182%2F102202161679550%2F%3Ftype%3D3&docid=8SfuXSfFEB4poM&tbnid=pkhyjTaqVtK1vM&vet=12ahUKEwjxxJPZ-uSJAxVZm7AFHdsFMN8QM3oECGcQAA..i&w=1080&h=566&hcb=2&ved=2ahUKEwjxxJPZ-uSJAxVZm7AFHdsFMN8QM3oECGcQAA",
+            "price": 15.00
+        }
     ]
   }
