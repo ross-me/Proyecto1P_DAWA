@@ -1,0 +1,13 @@
+.search-container{
+    margin-left: 20px;
+}
+.formElement{
+    margin: 10px;
+}
+form{
+    margin: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 15px;
+}

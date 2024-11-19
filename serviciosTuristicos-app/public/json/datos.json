@@ -1,122 +1,122 @@
 {
-    "peliculas": [
-      {
-        "id": "1",
-        "title": "Dune: Part Two",
-        "genre": "Sci-Fi",
-        "releaseDate": "2024-03-15",
-        "isAvailable": true,
-        "rating": "PG-13",
-        "poster": "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg",
-        "budget": 250000000
-      },
-      {
-        "id": "2",
-        "title": "Deadpool 3",
-        "genre": "Action",
-        "releaseDate": "2024-05-03",
-        "isAvailable": true,
-        "rating": "R",
-        "poster": "https://preview.redd.it/ucw50k1s9vkb1.jpg?auto=webp&s=ea0c25b9b6445bfe23e0b09ca71a4506ff5874e3",
-        "budget": 100000000
-      },
-      {
-        "id": "4",
-        "title": "Inside Out 2",
-        "genre": "Animation",
-        "releaseDate": "2024-06-14",
-        "isAvailable": true,
-        "rating": "PG",
-        "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpLRYlcMSuE3YXGHxQYOqXL_abzlOVTOn38w&s",
-        "budget": 200000000
-      },
-      {
+  "peliculas": [
+    {
+      "id": "1",
+      "title": "Dune: Part Two",
+      "genre": "Sci-Fi",
+      "releaseDate": "2024-03-15",
+      "isAvailable": true,
+      "rating": "PG-13",
+      "poster": "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg",
+      "budget": 250000000
+    },
+    {
+      "id": "2",
+      "title": "Deadpool 3",
+      "genre": "Action",
+      "releaseDate": "2024-05-03",
+      "isAvailable": true,
+      "rating": "R",
+      "poster": "https://preview.redd.it/ucw50k1s9vkb1.jpg?auto=webp&s=ea0c25b9b6445bfe23e0b09ca71a4506ff5874e3",
+      "budget": 100000000
+    },
+    {
+      "id": "4",
+      "title": "Inside Out 2",
+      "genre": "Animation",
+      "releaseDate": "2024-06-14",
+      "isAvailable": true,
+      "rating": "PG",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpLRYlcMSuE3YXGHxQYOqXL_abzlOVTOn38w&s",
+      "budget": 200000000
+    },
+    {
+      "id": "6",
+      "title": "Kung Fu Panda 4",
+      "genre": "Animation",
+      "releaseDate": "2024-03-08",
+      "isAvailable": true,
+      "rating": "PG",
+      "poster": "https://m.media-amazon.com/images/S/pv-target-images/1b2855d75a12c03f471c8fa132bb2bae77aeaadd4e8fbf76fd879378424133f8.jpg",
+      "budget": 150000000
+    },
+    {
+      "id": "7",
+      "title": "Jurassic World",
+      "genre": "Adventure",
+      "releaseDate": "2024-06-21",
+      "isAvailable": true,
+      "rating": "PG-13",
+      "poster": "https://es.web.img2.acsta.net/pictures/22/04/25/10/39/2475018.jpg",
+      "budget": 200000000
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "name": "Carlos",
+      "genre": "M"
+    },
+    {
+      "id": "2",
+      "title": "David",
+      "genre": "M"
+    }
+  ],
+  "actividades": [
+    {
+      "id": "1",
+      "name": "Caminata al Quilotoa",
+      "description": "Disfruta de una caminata por los alrededores de la laguna del Quilotoa, famosa por sus aguas turquesas y paisajes impresionantes.",
+      "category": "Aventura",
+      "raiting": true,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnHCojf_32m_KRvtPcQK7aMtw4jt33gZGvbTNVosXkzXMMPm_ixc74xhtSnmEqcIs5gtM&usqp=CAU",
+      "price": 30
+    },
+    {
+      "id": "2",
+      "name": "Descenso en bicicleta desde el Cotopaxi",
+      "description": "Atrévete a descender en bicicleta desde las faldas del volcán Cotopaxi, pasando por paisajes únicos.",
+      "category": "Aventura",
+      "raiting": false,
+      "image": "data:image/jpeg;base64,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",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "name": "Recorrido por el centro histórico de Quito",
+      "description": "Explora iglesias coloniales, plazas y monumentos en el centro histórico mejor preservado de América Latina.",
+      "category": "Cultural",
+      "raiting": true,
+      "image": "https://vistahermosa.ec/wp-content/uploads/2015/07/blog1_vista_hermosa_centro_quito_historico.jpg",
+      "price": 20
+    },
+    {
+      "id": "4",
+      "name": "Clase de elaboración de sombreros de paja toquilla",
+      "description": "Aprende de artesanos locales cómo se elaboran los famosos sombreros de Montecristi, patrimonio cultural de Ecuador.",
+      "category": "Cultural",
+      "raiting": true,
+      "image": "https://lodijeron.wordpress.com/wp-content/uploads/2010/12/foto-2-los-conocimientos-del-tejido-son-transferidos-a-los-hijos.jpg",
+      "price": 25
+    },
+    {
+      "id": "5",
+      "name": "Avistamiento de ballenas en Puerto López",
+      "description": "Vive una experiencia única al observar ballenas jorobadas en su hábitat natural durante la temporada migratoria.",
+      "category": "Aventura",
+      "raiting": true,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR20DqVN4o6Y30_vCEh8wn0eLclj3CYvRBQsHGciCcbEwHmz_qAdurt_-1qSrIiWmjJG2s&usqp=CAU",
+      "price": 35
+    },
+    {
         "id": "6",
-        "title": "Kung Fu Panda 4",
-        "genre": "Animation",
-        "releaseDate": "2024-03-08",
-        "isAvailable": true,
-        "rating": "PG",
-        "poster": "https://m.media-amazon.com/images/S/pv-target-images/1b2855d75a12c03f471c8fa132bb2bae77aeaadd4e8fbf76fd879378424133f8.jpg",
-        "budget": 150000000
-      },
-      {
-        "id": "7",
-        "title": "Jurassic World",
-        "genre": "Adventure",
-        "releaseDate": "2024-06-21",
-        "isAvailable": true,
-        "rating": "PG-13",
-        "poster": "https://es.web.img2.acsta.net/pictures/22/04/25/10/39/2475018.jpg",
-        "budget": 200000000
-      }
-    ],
-    "usuarios": [
-      {
-        "id": "1",
-        "name": "Carlos",
-        "genre": "M"
-      },
-      {
-        "id": "2",
-        "title": "David",
-        "genre": "M"
-      }
-    ],
-    "actividades": [
-        {
-            "id": "1",
-            "name": "Caminata al Quilotoa",
-            "description": "Disfruta de una caminata por los alrededores de la laguna del Quilotoa, famosa por sus aguas turquesas y paisajes impresionantes.",
-            "category": "Aventura",
-            "raiting": true,
-            "image": "https://www.google.com/imgres?q=caminata%20al%20quilotoa&imgurl=https%3A%2F%2Fadviceperu.com%2Fwp-content%2Fuploads%2F2017%2F06%2Ftrekking-quilotoa-crater-lake-450x265.jpg&imgrefurl=https%3A%2F%2Fadviceperu.com%2Fes%2Fecuador-caminata-la-avenida-los-volcanes-8-dias.html&docid=CZHjVPStAkEdKM&tbnid=zIrFighXmIiY3M&vet=12ahUKEwjfxfuZ-OSJAxWNSzABHT56JEwQM3oECBoQAA..i&w=450&h=265&hcb=2&ved=2ahUKEwjfxfuZ-OSJAxWNSzABHT56JEwQM3oECBoQAA",
-            "price": 30.00
-        },
-        {
-            "id": "2",
-            "name": "Descenso en bicicleta desde el Cotopaxi",
-            "description": "Atrévete a descender en bicicleta desde las faldas del volcán Cotopaxi, pasando por paisajes únicos.",
-            "category": "Aventura",
-            "raiting": false,
-            "image": "https://www.google.com/imgres?q=cotopaxi%20bicicleta&imgurl=https%3A%2F%2Fwww.imagineecuador.com%2Fwp-content%2Fuploads%2F2021%2F11%2FRecurso-119.png&imgrefurl=https%3A%2F%2Fwww.imagineecuador.com%2Fes%2Fcotopaxi-trekking-ciclismo-tours%2F&docid=IkbFbux_5vvsrM&tbnid=1ME-yMS8K8AEdM&vet=12ahUKEwjd36zL-eSJAxVxkIQIHRI0NlYQM3oECHMQAA..i&w=1200&h=687&hcb=2&ved=2ahUKEwjd36zL-eSJAxVxkIQIHRI0NlYQM3oECHMQAA",
-            "price": 50.00
-        },
-        {
-            "id": "3",
-            "name": "Recorrido por el centro histórico de Quito",
-            "description": "Explora iglesias coloniales, plazas y monumentos en el centro histórico mejor preservado de América Latina.",
-            "category": "Cultural",
-            "raiting": true,
-            "image": "https://www.google.com/imgres?q=centro%20hist%C3%B3rico%20de%20Quito&imgurl=https%3A%2F%2Fvistahermosa.ec%2Fwp-content%2Fuploads%2F2015%2F07%2Fblog1_vista_hermosa_centro_quito_historico.jpg&imgrefurl=https%3A%2F%2Fvistahermosa.ec%2Fcentro-historico-colonial-de-quito%2F&docid=qkY3jY4rF00FrM&tbnid=OGN9cLSp7icenM&vet=12ahUKEwjwsNP_-eSJAxXHRjABHZvJFgIQM3oECH4QAA..i&w=1600&h=1200&hcb=2&ved=2ahUKEwjwsNP_-eSJAxXHRjABHZvJFgIQM3oECH4QAA",
-            "price": 20.00
-        },
-        {
-            "id": "4",
-            "name": "Clase de elaboración de sombreros de paja toquilla",
-            "description": "Aprende de artesanos locales cómo se elaboran los famosos sombreros de Montecristi, patrimonio cultural de Ecuador.",
-            "category": "Cultural",
-            "raiting": true,
-            "image": "https://www.google.com/imgres?q=elaboraci%C3%B3n%20de%20sombreros%20de%20paja%20toquilla&imgurl=https%3A%2F%2Flodijeron.wordpress.com%2Fwp-content%2Fuploads%2F2010%2F12%2Ffoto-2-los-conocimientos-del-tejido-son-transferidos-a-los-hijos.jpg&imgrefurl=https%3A%2F%2Flodijeron.wordpress.com%2F2010%2F12%2F15%2Fmemoria-historica-de-elaboracion-del-sombrero-fino-de-paja-toquilla%2F&docid=3Uc8VnTUZwfzwM&tbnid=3xMcixkPqEZz0M&vet=12ahUKEwjPgOGg-uSJAxV_SDABHb6rMqUQM3oECBUQAA..i&w=1024&h=683&hcb=2&ved=2ahUKEwjPgOGg-uSJAxV_SDABHb6rMqUQM3oECBUQAA",
-            "price": 25.00
-        },
-        {
-            "id": "5",
-            "name": "Avistamiento de ballenas en Puerto López",
-            "description": "Vive una experiencia única al observar ballenas jorobadas en su hábitat natural durante la temporada migratoria.",
-            "category": "Aventura",
-            "raiting": true,
-            "image": "https://www.google.com/imgres?q=Avistamiento%20de%20ballenas%20en%20Puerto%20L%C3%B3pez&imgurl=https%3A%2F%2Fwww.eluniverso.com%2Fresizer%2Fv2%2FT5SOLRJSENBAZG3EVIPXPT7WYI.jpg%3Fauth%3D7e7e356d325055b020a091b51ef4745635a0bd55185ca578a3a1eb309c2f0148%26width%3D700%26height%3D395%26quality%3D75%26smart%3Dtrue&imgrefurl=https%3A%2F%2Fwww.eluniverso.com%2Fnoticias%2Fecuador%2Fpuerto-lopez-espera-40000-visitantes-y-al-menos-2-millones-durante-la-temporada-de-ballenas-nota%2F&docid=2aLn-O6W2XYIuM&tbnid=diKpq3Yy6QtBsM&vet=12ahUKEwjT8qW--uSJAxXrSjABHfD7BxIQM3oFCIABEAA..i&w=700&h=395&hcb=2&ved=2ahUKEwjT8qW--uSJAxXrSjABHfD7BxIQM3oFCIABEAA",
-            "price": 35.00
-        },
-        {
-            "id": "6",
-            "name": "Taller de danza folklórica ecuatoriana",
-            "description": "Sumérgete en la tradición cultural aprendiendo pasos básicos de los bailes típicos de las diferentes regiones del país.",
-            "category": "Cultural",
-            "raiting": true,
-            "image": "https://www.google.com/imgres?q=danza%20folkl%C3%B3rica%20ecuatoriana&imgurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D102202161679550&imgrefurl=https%3A%2F%2Fwww.facebook.com%2FCochaWarmi%2Fphotos%2Fa.102202508346182%2F102202161679550%2F%3Ftype%3D3&docid=8SfuXSfFEB4poM&tbnid=pkhyjTaqVtK1vM&vet=12ahUKEwjxxJPZ-uSJAxVZm7AFHdsFMN8QM3oECGcQAA..i&w=1080&h=566&hcb=2&ved=2ahUKEwjxxJPZ-uSJAxVZm7AFHdsFMN8QM3oECGcQAA",
-            "price": 15.00
-        }
-    ]
-  }
+        "name": "Taller de danza folklórica ecuatoriana",
+        "description": "Sumérgete en la tradición cultural aprendiendo pasos básicos de los bailes típicos de las diferentes regiones del país.",
+        "category": "Cultural",
+        "raiting": true,
+        "image": "https://www.ecuadorcenter.org/wp-content/uploads/2021/04/dancer_ayazamana17_opt.jpg",
+        "price": 15.00
+    }
+  ]
+}

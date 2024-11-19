@@ -1,1 +1,31 @@
-<p>lista-actividades works!</p>
+@if(activities.length===0){
+    <p> No hay actividades recreativas para mostrar</p>
+}@else{
+    @for (activity of activities; track $index){
+        <mat-card appearance="outlined" class="actividad-card">
+            <mat-card-header>
+                <mat-card-title> <strong>{{activity.name}}</strong></mat-card-title>                
+            </mat-card-header>
+            @if (activity.image) {
+                <img mat-card-image [src]="activity.image" [alt]="activity.image" #imgActivity />	
+            }@else {
+                <img mat-card-image src="images/default.png" [alt]="activity.image" #imgActivity  />
+            }
+            <mat-card-content>
+                <p>{{activity.description}}</p>
+                <p><strong>Categoría: </strong>{{activity.category}}</p>
+                <p><strong>Precio: </strong>{{activity.price| currency: "USD"}}</p>
+                @if(activity.raiting===true){
+                    <p class="raiting">Para todas las edades</p>
+                }@else{
+                    <p class="raiting">Para mayores de 16 años</p>
+                }
+            </mat-card-content>
+            <mat-card-actions>	               
+                <button mat-flat-button (click)="adquirir(activity)"> 
+                    <mat-icon>favorite</mat-icon> 
+                    Adquirir</button>
+            </mat-card-actions>	
+        </mat-card>
+    }
+}
