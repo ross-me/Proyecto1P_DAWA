@@ -5,17 +5,22 @@ import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MyDialogComponent } from '../shared/my-dialog/my-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-lista-actividades',
   standalone: true,
-  imports: [NgIf, NgFor, MatCardModule, MatIconModule, MatButtonModule, CurrencyPipe],
+  imports: [NgIf, NgFor, MatCardModule, MatIconModule, MatButtonModule, CurrencyPipe,
+    MyDialogComponent
+  ],
   templateUrl: './lista-actividades.component.html',
   styleUrl: './lista-actividades.component.css'
 })
 export class ListaActividadesComponent {
   activities: Actividad[] = [];
-  constructor(private miServicio:ActividadesjsonService){
+  constructor(private miServicio:ActividadesjsonService, private mydialog:MatDialog){
   }
 
   ngOnInit():void{
@@ -31,6 +36,7 @@ export class ListaActividadesComponent {
   }
 
   adquirir(activity:Actividad):void{
-
+    alert("Adquiriste la actividad "+activity.name);    
   }
+  
 }

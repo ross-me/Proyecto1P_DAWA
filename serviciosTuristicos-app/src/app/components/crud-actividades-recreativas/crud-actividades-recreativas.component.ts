@@ -1,5 +1,5 @@
 import { OnInit,  AfterViewInit, Component, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { Actividad } from '../../../models/Actividad';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
@@ -40,12 +40,13 @@ export class CrudActividadesRecreativasComponent {
     this.getActivities();
     //inicializar variables asociadas a los componentes delformulario
     this.form = this.fb.group({
-      name: [""],
-      description: [""],
-      category: [""],
-      raiting: [""],
-      image: [""],
-      price: [""]
+      name: ["",[Validators.required, Validators.minLength(10), Validators.pattern(/^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s]+$/)]],
+      description: ["",[Validators.required, Validators.minLength(20)]],
+      category: ["",Validators.required],
+      rating: [false],
+      image: ["",[Validators.required, Validators.pattern(/^(https?:\/\/)?([\w\-]+(\.[\w\-]+)+)(\/[\w\-._~:/?#[\]@!$&'()*+,;=%]*)?$/)]],
+      //image: [""],
+      price: ["",[Validators.required, Validators.min(8), Validators.max(50)]]
     });
   
   }
@@ -93,10 +94,63 @@ export class CrudActividadesRecreativasComponent {
     });
   }
 
-  editar(actividad:Actividad){}
+  editar(actividad:Actividad){
+    this.isEditMode=true;
+    if(actividad && actividad.id){
+      this.currentId = actividad.id;
+    }else{
+      console.log("Actividad o id de la actividad undefined")
+    }
+
+    //cargar datos de la pelicula
+    this.form.setValue({
+      name:actividad.name,
+      description:actividad.description,
+      category:actividad.category,
+      rating:actividad.rating,
+      image:actividad.image,
+      price:actividad.price,
+    });
+  }
 
   onSubmit(){
+    //guardar la actividad
 
+    //revisar si el formulario es valido
+    if(this.form.invalid){
+      console.log("invalid");
+      return;
+    }
+
+    //obtener los datos de los controles del formulario
+    const newActividad:Actividad = this.form.value;
+
+    if(this.isEditMode){//editar
+      newActividad.id=this.currentId;
+      this.activityService.updateActivity(newActividad).subscribe((updateActividad)=>{
+          alert("Actividad editada exitosamente");
+          this.getActivities(); //acualizar data source de la tabla de act
+      });
+    }else{//agregar
+      this.activityService.addActivity(newActividad).subscribe((updateActividad)=>{
+        alert("Actividad agregada exitosamente");
+        this.getActivities(); //acualizar data source de la tabla de act
+    });
+    }
+    this.clearForm();
+
+  }
+  clearForm():void{
+    this.form.reset({
+      name:'',
+      description:'',
+      category:'',
+      rating:'',
+      image:'',
+      price:''
+    });
+    this.currentId=0;
+    this.isEditMode=false;
   }
 
 

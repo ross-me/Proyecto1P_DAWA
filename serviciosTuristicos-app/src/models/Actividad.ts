@@ -4,7 +4,7 @@ export interface Actividad{
     name: string;
     description: string;
     category: string;
-    raiting: boolean;
+    rating: boolean;
     image: string;
     price: number;
     

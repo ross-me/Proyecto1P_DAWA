@@ -1,22 +1,71 @@
 
 .encabezado{
-    background-color: rgb(204, 184, 204);
+    background-color: rgb(92, 69, 34);
     padding: 20px;
 
 }
 .encabezado h1{
     text-align: center;
+    color: white;
 }
 
-a{
+/*a{
     text-decoration: none;
     padding: 5px;
     background-color: rgb(160, 131, 160);
     color: white;
     border: 1px solid rgb(212, 210, 212);
-}
-.active{
-    background-color: rgb(69, 53, 78);
+}*/
+/*.active{
+    background-color: rgb(151, 104, 34);
     color: rgb(255, 255, 255);
-    border-radius: 10px;
+}*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+nav{
+    
+    margin: auto;
+    background-color: rgb(102, 66, 45);
+    margin-top: 50px;
+    
+}
+
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.menu-horizontal > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal > li:hover{
+    background-color: rgb(209, 156, 95);
+}
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 250px;
+    background-color: rgb(133, 106, 66);
+    z-index: 10; /* Eleva el submenú sobre otros elementos */
+}
+.menu-horizontal li:hover .menu-vertical{
+    display: block;
+}
+.menu-vertical li:hover{
+    background-color: rgb(116, 88, 47);
+}
+.menu-vertical li a{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
 }
