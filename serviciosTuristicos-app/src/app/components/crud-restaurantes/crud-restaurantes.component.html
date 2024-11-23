@@ -1,0 +1,162 @@
+<div>
+  <h2 class="subtitulo">{{Title}}</h2>
+</div>
+
+<div class="container">
+    <form [formGroup]="form" class="ocultar" (submit)="onSubmit()">
+      <mat-form-field class="formCampoMedio">
+          <mat-label>Nombre del Local:</mat-label>
+          <input matInput type="text" placeholder="Nombre" formControlName="Nombre"/> 
+          <mat-error>
+            @if(form.get('Nombre')?.invalid && (form.get('Nombre')?.dirty || form.get('Nombre')?.touched)){
+              @if (form.get('Nombre')?.errors?.['required']) {
+                Nombre es requerido
+              }
+              @else if (form.get('Nombre')?.errors?.['minlength']) {
+                Nombre minimo 8 caracteres
+              }
+              @else if(form.get('Nombre')?.errors?.['pattern']){
+                Nombre solo debe contener letras y numeros
+              }
+            }
+          </mat-error> 
+      </mat-form-field>
+
+      <mat-form-field class="formCampoMedio">
+        <mat-label>Tipo de Comida:</mat-label>
+          <mat-select formControlName="Tipo">
+            <mat-option value="Latina">Latina</mat-option>
+            <mat-option value="Internacional">Internacional</mat-option>
+            <mat-option value="Multicultural">Multicultural</mat-option>
+          </mat-select>
+          <mat-error>
+            @if(form.get('Tipo')?.invalid && (form.get('Tipo')?.dirty || form.get('Tipo')?.touched)){
+              @if (form.get('Tipo')?.errors?.['required']) {
+                Tipo de comidad es requerida
+              }
+            }
+          </mat-error> 
+      </mat-form-field> 
+
+      <mat-form-field class="formCampoLargo">
+          <mat-label>Especialidad del Local:</mat-label>
+          <input matInput type="text" placeholder="Especialidad" formControlName="Especialidad"/>   
+          <mat-error>
+            @if(form.get('Especialidad')?.invalid && (form.get('Especialidad')?.dirty || form.get('Especialidad')?.touched)){
+              @if (form.get('Especialidad')?.errors?.['required']) {
+                Especialidad es requerida
+              }
+              @else if (form.get('Especialidad')?.errors?.['minlength']) {
+                Especialidad minimo 5 caracteres
+              }
+              @else if(form.get('Especialidad')?.errors?.['pattern']){
+                Especialidad solo debe contener letras y numeros
+              }
+            }
+          </mat-error>      
+      </mat-form-field>
+
+      <mat-form-field class="formCampoPequeño">
+          <mat-label>Calificación:</mat-label>
+          <input matInput type="number" placeholder="0" min="0.5" max="5" step="0.5" formControlName="Calificacion"/>  
+          <mat-error>
+            @if(form.get('Calificacion')?.invalid && (form.get('Calificacion')?.dirty || form.get('Calificacion')?.touched)){
+              @if (form.get('Calificacion')?.errors?.['required']) {
+                Calificación es requerido
+              }@else if (form.get('Calificacion')?.errors?.['min']) {
+                Calificación minimo 0.5 
+              }@else if(form.get('Calificacion')?.errors?.['max']){
+                Calificación maximo 5
+              }
+            } 
+          </mat-error>       
+      </mat-form-field>
+
+      <mat-form-field class="formCampoLargo">
+        <mat-label>Dirección del Local:</mat-label>
+        <input matInput type="text" placeholder="Direccion" formControlName="Direccion"/>
+        <mat-error>
+          @if(form.get('Direccion')?.invalid && (form.get('Direccion')?.dirty || form.get('Direccion')?.touched)){
+            @if (form.get('Direccion')?.errors?.['required']) {
+              Dirección es requerida
+            }
+            @else if (form.get('Direccion')?.errors?.['minlength']) {
+              Dirección minimo 10 caracteres
+            }
+            @else if(form.get('Direccion')?.errors?.['pattern']){
+              Dirección solo debe contener letras y numeros
+            }
+          }
+        </mat-error> 
+    </mat-form-field>
+
+      <mat-form-field class="formCampoLargo">
+          <mat-label>Url de la Foto del Restaurante:</mat-label>
+          <input matInput type="url" placeholder="url" formControlName="Foto"/>
+          <mat-error>
+            @if(form.get('Foto')?.invalid && (form.get('Foto')?.dirty || form.get('Foto')?.touched)){
+              @if (form.get('Foto')?.errors?.['required']) {
+                Url es requerida
+              }
+              @else if(form.get('Foto')?.errors?.['pattern']){
+                Url no valida
+              }
+            }
+          </mat-error> 
+      </mat-form-field>
+      
+        <div>
+          <button mat-raised-button class="formActions" color="primary" type="submit">Guardar</button>    
+          <button mat-raised-button class="formActions" color="primary" type="reset" (click)="clearForm()">Cancelar</button>   
+        </div>
+  </form>
+
+  <div class="search-container">
+      <mat-form-field>
+          <mat-label>Buscar Restaurante:</mat-label>
+          <input matInput type="search" placeholder="Nombre o Tipo" #searchInput 
+          (keyup)="search(searchInput)"/>        
+      </mat-form-field>
+      <button mat-raised-button class="formActions" color="primary" (click)="search(searchInput)">Buscar</button>
+  </div>
+
+  <div class="row">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let Restaurante"> {{Restaurante.Nombre}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Tipo">
+        <th mat-header-cell *matHeaderCellDef> Tipo </th>
+        <td mat-cell *matCellDef="let Restaurante"> {{Restaurante.Tipo}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Especialidad">
+        <th mat-header-cell *matHeaderCellDef> Especialidad </th>
+        <td mat-cell *matCellDef="let Restaurante"> {{Restaurante.Especialidad}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Direccion">
+        <th mat-header-cell *matHeaderCellDef> Dirección </th>
+        <td mat-cell *matCellDef="let Restaurante"> {{Restaurante.Direccion}} </td>
+      </ng-container>
+        
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Acciones </th>
+        <td mat-cell *matCellDef="let Restaurante"> 
+        <button mat-raised-button class="formActions" color="accent" (click)="editar(Restaurante)">Editar</button>    
+        <button mat-raised-button class="formActions" color="warn" (click)="eliminar(Restaurante)">Eliminar</button>    
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="['Nombre', 'Tipo', 'Especialidad', 'Direccion', 'actions']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['Nombre', 'Tipo', 'Especialidad', 'Direccion', 'actions'];"></tr>
+    </table>
+  </div>
+
+  <mat-paginator [pageSizeOptions]="[4, 7, 20]" aria-label="Select page" showFirstLastButtons>
+  </mat-paginator>
+</div>
+

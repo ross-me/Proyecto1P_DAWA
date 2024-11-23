@@ -4,14 +4,18 @@ import { ListaActividadesComponent } from './components/lista-actividades/lista-
 import { CrudActividadesRecreativasComponent } from './components/crud-actividades-recreativas/crud-actividades-recreativas.component';
 import { CrudTransporteComponent } from './components/crud-transporte/crud-transporte.component';
 import { TransporteComponent } from './components/transporte/transporte.component';
+import { CrudRestaurantesComponent } from './components/crud-restaurantes/crud-restaurantes.component';
+import { ListaRestaurantesComponent } from './components/lista-restaurantes/lista-restaurantes.component';
 
 
 export const routes: Routes = [
     {path:"lista-peliculas", component: ListaPeliculasComponent},
     {path:"lista-actividades", component: ListaActividadesComponent},
-    {path:"crud-actividadesRecreativas", component: CrudActividadesRecreativasComponent},
     {path:"transporte", component: TransporteComponent},
+    {path:"lista-restaurantes", component: ListaRestaurantesComponent},
     {path:"Crud-transporte", component: CrudTransporteComponent},
+    {path:"crud-actividadesRecreativas", component: CrudActividadesRecreativasComponent},
+    {path:"crud-restaurantes", component: CrudRestaurantesComponent},
     //{path:"crud-peliculas", component: CrudPeliculasComponent},
     //rutas por defecto
     {path:"", redirectTo: "lista-peliculas", pathMatch:'full'}, //no existe

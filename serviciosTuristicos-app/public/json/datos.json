@@ -210,5 +210,52 @@
       "image": "https://i.pinimg.com/736x/e5/2f/0d/e52f0dd914309ad8023bb2ca3b0d5218.jpg",
       "price": 30
     }
+  ],
+  "restaurantes": [
+    {
+      "Nombre": "El Patio",
+      "Tipo": "Multicultural",
+      "Especialidad": "Desayuno, Comidas, Cenas, Brunch, Bebidas",
+      "Calificacion": 5,
+      "Direccion": "Av. 9 de Octubre 414 Garcia Moreno, Guayaquil",
+      "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/5e/d4/7d/caption.jpg?w=900&h=500&s=1",
+      "id": "1"
+    },
+    {
+      "Nombre": "LA CARNICERÍA DE CHAVELA",
+      "Tipo": "Latina",
+      "Especialidad": "Comidas, Cenas, Bebidas",
+      "Calificacion": "4.5",
+      "Direccion": "Urdesa Central Urdesa, Ceibos, Samborondón, Quito, Guayaquil",
+      "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/f2/91/3c/la-carniceria-de-chavela.jpg?w=800&h=500&s=1",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "Nombre": "Restaurante Río Grande",
+      "Tipo": "Internacional",
+      "Direccion": "Calle Numa Pompilio Llona SN, Guayaquil",
+      "Calificacion": "4.5",
+      "Especialidad": "Desayuno, Comidas, Cenas, Brunch",
+      "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/03/1b/a7/restaurante-rio-grande.jpg?w=900&h=500&s=1"
+    },
+    {
+      "Nombre": "Riviera Restaurant",
+      "Tipo": "Internacional",
+      "Especialidad": "Comidas, Cenas, Bebidas",
+      "Calificacion": "4.5",
+      "Direccion": "Av. Victor Emilio Estrada 707, Guayaquil",
+      "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/cc/f6/1d/sala-la-pergola.jpg?w=900&h=500&s=1",
+      "id": "4"
+    },
+    {
+      "Nombre": "Embarcadero 41",
+      "Tipo": "Latina",
+      "Especialidad": "Comidas, Cenas",
+      "Calificacion": "4.5",
+      "Direccion": "Local 6, Avenida La Puntilla Centro Comercial Plaza Lagos, Guayaquil",
+      "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b2/0a/be/iembarcadero-41.jpg?w=900&h=500&s=1",
+      "id": "5"
+    }
   ]
 }
