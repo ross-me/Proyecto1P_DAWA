@@ -118,5 +118,97 @@
       "price": 15,
       "id": "6"
     }
+  ],
+  "transporte": [
+    {
+      "type": "terrestre",
+      "brand": "Vehículo chevrolet",
+      "description": "El Chevrolet doble cabina es un 4x4 amplio que te permite viajar a donde sea sin preocuparte de cómo estará la ruta. Es el vehículo ideal para las salidas de campo y las aventuras en todo el Ecuador. Además, dispone de un amplio maletero para llevar todo tu material.",
+      "capacity": "5 pasajeros",
+      "comfort": "para pasar en familia",
+      "image": "https://gurudeautos.com/wp-content/uploads/2021/05/image-Test-Drive-Pick-Up-Chevrolet-S10-LS-Doble-Cabina-MT-4x2-01-1.jpg",
+      "price": 70,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "type": "terrestre",
+      "brand": "Vehículo Toyota",
+      "description": "Toyota Corolla 2023, un sedán versátil con excelente rendimiento de combustible, ideal para viajes urbanos y carretera. Su diseño elegante combina estilo y funcionalidad.",
+      "capacity": "5 pasajeros",
+      "comfort": "A/C dual, sistema de navegación integrado, puertos USB y control crucero adaptativo",
+      "image": "https://www.automoblog.com/wp-content/uploads/2022/11/2023-Toyota-Corolla-9-1400x934.jpg",
+      "price": 50
+    },
+    {
+      "id": "3",
+      "type": "terrestre",
+      "brand": "Vehículo Honda",
+      "description": "El Honda CR-V es un SUV espacioso, perfecto para viajes largos y familias. Su interior moderno incluye tecnología avanzada y una conducción cómoda.",
+      "capacity": "5 pasajeros",
+      "comfort": "A/C, pantalla de infoentretenimiento 10”, integración con Android Auto y Apple CarPlay",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/28/2017_Honda_CR-V_front_4.11.18.jpg",
+      "price": 65
+    },
+    {
+      "type": "aéreo",
+      "brand": "Globo Aerostático",
+      "description": "Un globo aerostático para disfrutar vistas panorámicas y experiencias únicas desde las alturas. Ideal para eventos especiales y recorridos turísticos.",
+      "capacity": "6 personas",
+      "comfort": "Vista 360°, comunicación por radio y canasta cómoda",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Foto_globo_Boreal_1_y_2._Vuelo_pasajeros.jpg/800px-Foto_globo_Boreal_1_y_2._Vuelo_pasajeros.jpg",
+      "price": 200,
+      "id": "4"
+    },
+    {
+      "id": "5",
+      "type": "aéreo",
+      "brand": "Avión Cessna",
+      "description": "Avioneta ultraligera perfecta para recorridos cortos y exploraciones aéreas. Ofrece una experiencia personal y cercana a la aviación.",
+      "capacity": "2 pasajeros",
+      "comfort": "Cabina climatizada, asientos ergonómicos y ventanas panorámicas",
+      "image": "https://img.aeroexpo.online/es/images_ar/photo-mg/174531-17794789.jpg",
+      "price": 150
+    },
+    {
+      "id": "6",
+      "type": "aéreo",
+      "brand": "Helicóptero Bell",
+      "description": "Un helicóptero diseñado para recorridos turísticos y traslados rápidos. Disfruta de una experiencia de lujo y vistas incomparables.",
+      "capacity": "4 pasajeros",
+      "comfort": "Cabina insonorizada, asientos de cuero y aire acondicionado",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/11-09-fotofluege-cux-allg-04.jpg/1100px-11-09-fotofluege-cux-allg-04.jpg",
+      "price": 300
+    },
+    {
+      "id": "7",
+      "type": "terrestre",
+      "brand": "Bus Turístico Volvo",
+      "description": "Bus turístico con techo descubierto, ideal para recorridos urbanos y turísticos. Con guía en vivo para explorar la ciudad.",
+      "capacity": "50 pasajeros",
+      "comfort": "Asientos cómodos, Wi-Fi a bordo y sistema de audio multilingüe",
+      "image": "https://thumbs.dreamstime.com/b/autob%C3%BAs-blanco-de-la-ciudad-de-volvo-35716783.jpg",
+      "price": 20
+    },
+    {
+      "id": "8",
+      "type": "terrestre",
+      "brand": "Bus Turístico Mercedes-Benz",
+      "description": "Autobús moderno para excursiones de larga distancia. Ideal para grupos grandes que buscan comodidad y seguridad.",
+      "capacity": "60 pasajeros",
+      "comfort": "Asientos reclinables, baño a bordo, A/C y pantallas de entretenimiento",
+      "image": "https://motoradiesel.com/dev/wp-content/uploads/2020/08/MB1-870x489.jpg",
+      "price": 25
+    },
+    {
+      "id": "9",
+      "type": "terrestre",
+      "brand": "Bus Turístico Scania",
+      "description": "Un autobús turístico con tecnología avanzada, diseñado para recorridos seguros y eficientes en cualquier terreno.",
+      "capacity": "55 pasajeros",
+      "comfort": "Wi-Fi, cargadores USB en cada asiento, y sistema de aire purificado",
+      "image": "https://i.pinimg.com/736x/e5/2f/0d/e52f0dd914309ad8023bb2ca3b0d5218.jpg",
+      "price": 30
+    }
   ]
 }
