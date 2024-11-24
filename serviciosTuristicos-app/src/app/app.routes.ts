@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { ListaPeliculasComponent } from './components/lista-peliculas/lista-peliculas.component';
 import { ListaActividadesComponent } from './components/lista-actividades/lista-actividades.component';
 import { CrudActividadesRecreativasComponent } from './components/crud-actividades-recreativas/crud-actividades-recreativas.component';
 import { ListaGuiasTuristicosComponent } from './components/lista-guias-turisticos/lista-guias-turisticos.component';
@@ -11,7 +10,6 @@ import { ListaRestaurantesComponent } from './components/lista-restaurantes/list
 
 
 export const routes: Routes = [
-    {path:"lista-peliculas", component: ListaPeliculasComponent},
     {path:"lista-actividades", component: ListaActividadesComponent},
     {path:"transporte", component: TransporteComponent},
     {path:"lista-restaurantes", component: ListaRestaurantesComponent},
@@ -20,10 +18,11 @@ export const routes: Routes = [
     {path:"lista-guias-turisticos", component: ListaGuiasTuristicosComponent},
     {path:"crud-guias-turisticos", component: CrudGuiasTuristicosComponent},
     {path:"crud-restaurantes", component: CrudRestaurantesComponent},
-    //{path:"crud-peliculas", component: CrudPeliculasComponent},
+    
     //rutas por defecto
-    {path:"", redirectTo: "lista-peliculas", pathMatch:'full'}, //no existe
-    {path:"**", redirectTo: "lista-peliculas"} //equivocada el "**" representa cualquier otra ruta q 
+    
+    //{path:"", redirectTo: "index-servicios", pathMatch:'full'}, //no existe
+    //{path:"**", redirectTo: "index-servicios"} //equivocada el "**" representa cualquier otra ruta q 
     //esté dentro de las colocadas arriba
 
 ];
