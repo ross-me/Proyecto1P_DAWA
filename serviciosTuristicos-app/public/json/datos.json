@@ -249,5 +249,61 @@
       "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b2/0a/be/iembarcadero-41.jpg?w=900&h=500&s=1",
       "id": "5"
     }
+  ],
+  "excursiones": [
+    {
+      "name": "Excursión a Los Túneles",
+      "description": "Descubre los tesoros ocultos de la Isla Isabela y bucea a través de los impresionantes túneles de lava junto a la preciosa fauna. ¡No te lo puedes perder!",
+      "duration": 7,
+      "guideLanguage": "Español",
+      "price": 155,
+      "image": "https://happygringo.com/wp-content/uploads/2021/08/los-tuneles-galapagos-landscape.jpg",
+      "id": "1"
+    },
+    {
+      "name": "Excursión a Ingapirca, Gualaceo y Chordeleg",
+      "description": "Únete a esta excursión y combina las principales atracciones del Azuay. Descubriendo ruinas incas, artesanías y mucha tradición. ¡Qué esperas!",
+      "duration": 10,
+      "guideLanguage": "Español",
+      "price": 170,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAgwM6SaOTbnVkihwcEfbYX8oD7qZMM6URBA&s",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "name": "Excursión a Montañita + vuelo en parapente",
+      "description": "Escapa a la magia de Montañita y vive una aventura única en las alturas. Ven y haz de este viaje una experiencia que recordarás para siempre.",
+      "duration": 12,
+      "guideLanguage": "Portugués",
+      "price": 205,
+      "image": "https://ecuadors.live/wp-content/uploads/2024/04/montanita-ecuadorlife.webp"
+    },
+    {
+      "id": "4",
+      "name": "Excursión a la reserva Manglares Churute",
+      "description": "Descubre la fauna y flora de Ecuador con esta excursión a la reserva Manglares de Churute, uno de los ecosistemas más asombrosos del golfo de Guayaquil.",
+      "duration": 6,
+      "guideLanguage": "Español",
+      "price": 65,
+      "image": "https://www.turisec.com/wp-content/uploads/2022/12/paisajes-manglares-churute-1.jpg"
+    },
+    {
+      "name": "Excursión a la Casa del Árbol",
+      "description": "Vive una experiencia única en Baños de Agua Santa, explorando la cabaña de madera más típica del Ecuador y disfruta del paisaje en su Columpio del Fin del Mundo. ¡Ven ya!",
+      "duration": 4,
+      "guideLanguage": "Inglés",
+      "price": 15,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuDZQmdh3WXX4P6eLhqZbjMAM9mnCCqjxldg&s",
+      "id": "5"
+    },
+    {
+      "id": "6",
+      "name": "Excursión a la playa de Los Frailes",
+      "description": "Dejate llevar de playas de arena blanca, aguas cristalinas y calmadas, paisajes paradisíacos, e, incluso ¡una comunidad indígena y disfruta de esta excursión",
+      "duration": 5,
+      "guideLanguage": "Inglés",
+      "price": 65,
+      "image": "https://beachlifeecuador.com/wp-content/uploads/2020/05/Playa-Los-Frailes-Ecuador.jpg"
+    }
   ]
 }

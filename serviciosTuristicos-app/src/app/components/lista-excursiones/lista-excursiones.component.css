@@ -1,0 +1,52 @@
+h3{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.contenido{
+    display:flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+
+.excursion-card{
+    padding: 10px;;
+    margin:10px;
+    width: 25%;
+}
+
+.excursion-card:hover{
+    box-shadow:0px 3px 3px 3px #aaa;
+}
+
+.excursion-card img{
+    width: 200px;
+    height: 250px;
+    margin:auto;
+    padding: 10px;
+}
+
+
+mat-card-title{
+    text-align: center;
+}
+
+
+
+mat-icon{
+    vertical-align: text-bottom;
+}
+
+mat-card-actions{
+    display: flex;
+    justify-content: center;
+}
+
+.price{
+    text-align: center;
+}
+
+
