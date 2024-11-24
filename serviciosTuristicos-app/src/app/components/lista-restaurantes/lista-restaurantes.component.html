@@ -1,0 +1,33 @@
+<div>
+    <h2 class="subtitulo">{{Title}}</h2>
+</div>
+
+@if(restaurantes.length===0){
+    <p>No hay restaurantes para mostrar</p>
+}@else {
+    <div class="CardsCenter">
+        @for (restaurante of restaurantes; track $index) {
+            <mat-card appearance="outlined" class="restaurante">
+                <mat-card-header>
+                    <mat-card-title><strong>{{restaurante.Nombre | uppercase}}</strong></mat-card-title>
+                    <mat-card-subtitle>{{restaurante.Tipo}}</mat-card-subtitle>
+                </mat-card-header>
+                @if (restaurante.Foto) {
+                    <img mat-card-image [src]="restaurante.Foto" [alt]="restaurante.Foto" #imgRestaurante />
+                }@else {
+                    <img mat-card-image src="images/default.png" [alt]="restaurante.Foto" #imgRestaurante />
+                }
+                <mat-card-content>
+                    <p><strong>Dirección:</strong> {{restaurante.Direccion}}</p>
+                    <p><strong>Calificación:</strong> {{restaurante.Calificacion}}/5</p>
+                    <p><strong>Especialidad:</strong> {{restaurante.Especialidad}}</p>
+                </mat-card-content>
+                <mat-card-actions class="btnReservar">
+                    <button mat-flat-button  (click)="Reservar(restaurante)">
+                        <mat-icon> event </mat-icon>Reservar
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        }
+    </div>     
+}
