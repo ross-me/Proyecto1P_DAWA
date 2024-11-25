@@ -39,12 +39,12 @@ export class CrudExcursionesComponent {
     this.getExcursions();
     //inicializar los variables asociadas a los componentes del formulario
     this.form=this.fb.group({
-      name:["",[Validators.required, Validators.minLength(5)]],
-      description:["",Validators.required], 
+      name:["",[Validators.required, Validators.minLength(5), Validators.maxLength(100)]],
+      description:["",[Validators.required, Validators.minLength(10)]], 
       duration:["", [Validators.required, Validators.min(1), Validators.max(24)]],
       guideLanguage:["", Validators.required],
       price:["", [Validators.required, Validators.min(1), Validators.max(20000)]],
-      image:[""],
+      image:["",[Validators.required, Validators.pattern('^(https?:\\/\\/)?([\\w-]+\\.)+[\\w-]+(\\/[\\w-]*)*(\\?.*)?(#.*)?$')]],
     });
   }
 
@@ -79,7 +79,7 @@ export class CrudExcursionesComponent {
       if(result==="aceptar"){ 
         this.excursionService.deleteExcursion(excursion).subscribe(()=>{
           alert("Eliminado exitosamente");
-          this.getExcursions;
+          this.getExcursions();
         });
       }else if(result==="cancelar"){
         console.log("Cancelar");
@@ -103,8 +103,8 @@ export class CrudExcursionesComponent {
       duration:excursion.duration,
       guideLanguage:excursion.guideLanguage,
       price:excursion.price,
-      image:excursion.image?excursion.image:'', //dato no requerido
-    })
+      image:excursion.image, 
+    });
   }
 
   
@@ -128,9 +128,7 @@ export class CrudExcursionesComponent {
         alert("Excursión agregada con éxito");
         this.getExcursions();
       });
-
     }
-
     this.clearForm();
   }
 

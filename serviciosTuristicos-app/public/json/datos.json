@@ -304,6 +304,15 @@
       "guideLanguage": "Inglés",
       "price": 65,
       "image": "https://beachlifeecuador.com/wp-content/uploads/2020/05/Playa-Los-Frailes-Ecuador.jpg"
+    },
+    {
+      "name": "Excursión a Cotopaxi y Quilotoa",
+      "description": "Explora uno de los volcanes activos más altos del mundo, y la impresionante laguna del Quilotoa, cuyas aguas turquesas yacen sobre el cráter de un volcán.",
+      "duration": 8,
+      "guideLanguage": "Inglés",
+      "price": 135,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBPSbmtl57uHJEWZmnLVEvBJ0MgSSEGQPyA&s",
+      "id": "77a9"
     }
   ]
 }
