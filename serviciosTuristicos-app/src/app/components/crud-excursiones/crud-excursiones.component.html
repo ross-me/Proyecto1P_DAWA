@@ -96,9 +96,6 @@
                 @if(form.get('image')?.errors?.['required']){
                     Url es requerida
                 }
-                @else if(form.get('image')?.errors?.['pattern']){
-                    Url no válida
-                }
             }
            </mat-error>
       </mat-form-field>

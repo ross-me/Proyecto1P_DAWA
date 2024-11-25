@@ -254,7 +254,7 @@
     {
       "name": "Excursión a Los Túneles",
       "description": "Descubre los tesoros ocultos de la Isla Isabela y bucea a través de los impresionantes túneles de lava junto a la preciosa fauna. ¡No te lo puedes perder!",
-      "duration": 6,
+      "duration": 7,
       "guideLanguage": "Español",
       "price": 155,
       "image": "https://happygringo.com/wp-content/uploads/2021/08/los-tuneles-galapagos-landscape.jpg",
@@ -263,7 +263,7 @@
     {
       "name": "Excursión a Ingapirca, Gualaceo y Chordeleg",
       "description": "Únete a esta excursión y combina las principales atracciones del Azuay. Descubriendo ruinas incas, artesanías y mucha tradición. ¡Qué esperas!",
-      "duration": 10,
+      "duration": 11,
       "guideLanguage": "Español",
       "price": 170,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAgwM6SaOTbnVkihwcEfbYX8oD7qZMM6URBA&s",
@@ -306,13 +306,13 @@
       "image": "https://beachlifeecuador.com/wp-content/uploads/2020/05/Playa-Los-Frailes-Ecuador.jpg"
     },
     {
+      "id": "a82e",
       "name": "Excursión a Cotopaxi y Quilotoa",
       "description": "Explora uno de los volcanes activos más altos del mundo, y la impresionante laguna del Quilotoa, cuyas aguas turquesas yacen sobre el cráter de un volcán.",
       "duration": 8,
       "guideLanguage": "Inglés",
       "price": 135,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBPSbmtl57uHJEWZmnLVEvBJ0MgSSEGQPyA&s",
-      "id": "77a9"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBPSbmtl57uHJEWZmnLVEvBJ0MgSSEGQPyA&s"
     }
   ]
 }

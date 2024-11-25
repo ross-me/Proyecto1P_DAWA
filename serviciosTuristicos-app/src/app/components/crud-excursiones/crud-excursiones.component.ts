@@ -44,7 +44,7 @@ export class CrudExcursionesComponent {
       duration:["", [Validators.required, Validators.min(1), Validators.max(24)]],
       guideLanguage:["", Validators.required],
       price:["", [Validators.required, Validators.min(1), Validators.max(20000)]],
-      image:["",[Validators.required, Validators.pattern('^(https?:\\/\\/)?([\\w-]+\\.)+[\\w-]+(\\/[\\w-]*)*(\\?.*)?(#.*)?$')]],
+      image:["",Validators.required],
     });
   }
 
