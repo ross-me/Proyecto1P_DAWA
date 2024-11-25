@@ -1,24 +1,28 @@
 import { Component } from '@angular/core';
-import { Actividad } from '../../../models/Actividad';
-import { ActividadesjsonService } from '../../services/actividadesjson.service';
+import { Actividad } from '../../models/Actividad';
+import { ActividadesjsonService } from '../../services/ServiciosActividades/actividadesjson.service';
 import { CurrencyPipe, NgFor, NgIf } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MyDialogComponent } from '../shared/my-dialog/my-dialog.component';
+import { DialogoConfirmacion } from '../shared/Dialogo-Confirmacion/dialogo-confirmacion.component';
+import { DialogoExito } from "../shared/Dialogo-Exito/dialogo-exito.component";
 import { MatDialog } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 
 @Component({
   selector: 'app-lista-actividades',
   standalone: true,
-  imports: [NgIf, NgFor, MatCardModule, MatIconModule, MatButtonModule, CurrencyPipe,
-    MyDialogComponent
+  imports: [MatCardModule, MatIconModule, MatButtonModule, CurrencyPipe,
+    MatDividerModule
   ],
   templateUrl: './lista-actividades.component.html',
   styleUrl: './lista-actividades.component.css'
 })
 export class ListaActividadesComponent {
+  Title = 'Lista de Actividades';
   activities: Actividad[] = [];
   constructor(private miServicio:ActividadesjsonService, private mydialog:MatDialog){
   }
@@ -36,7 +40,28 @@ export class ListaActividadesComponent {
   }
 
   adquirir(activity:Actividad):void{
-    alert("Adquiriste la actividad "+activity.name);    
+    const dialogRef= this.mydialog.open(DialogoConfirmacion,{
+      data:{
+        titulo: activity.name,
+        contenido:"¿Quieres adquirir esta actividad?"
+      }
+    });
+    dialogRef.afterClosed().subscribe(result=>{
+      if(result === "aceptar"){
+        const dialogRef= this.mydialog.open(DialogoExito,{
+          data:{
+            titulo: "Adquisicion Realizada",
+            contenido:" Adquiriste la actividad de : \"" +activity.name+"\"."
+          }
+        });
+        dialogRef.afterClosed().subscribe(result=>{
+          if(result === "aceptar"){
+            console.log("Aceptar");
+        }});
+      }else if(result === "cancelar"){
+        console.error("Cancelar");
+      }
+    })  
   }
   
 }

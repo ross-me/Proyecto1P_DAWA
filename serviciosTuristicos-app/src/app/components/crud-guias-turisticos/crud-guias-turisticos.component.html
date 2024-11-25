@@ -1,4 +1,5 @@
-<h2>CRUD Guías Turísticos</h2>
+<h2>{{Title}}</h2>
+<mat-divider></mat-divider>
 <!--Formularios reactivos de angular-->
 <div class="container">
     <form [formGroup]="form" class="ocultar" (submit)="onSubmit()">
@@ -75,8 +76,8 @@
         </mat-form-field>
 
         <div>
-            <button mat-raised-button color="primary" type="submit">Guardar</button>    
-            <button mat-raised-button color="primary" type="reset" (click)="clearForm()">Cancelar</button>   
+            <button mat-raised-button class="formActions" color="primary" type="submit">Guardar</button>    
+            <button mat-raised-button class="formActions" color="primary" type="reset" (click)="clearForm()">Cancelar</button>   
         </div>
 
     </form>
@@ -108,8 +109,8 @@
         <ng-container matColumnDef="actions">
             <th mat-header-cell *matHeaderCellDef> Acciones </th>
             <td mat-cell *matCellDef="let guia"> 
-            <button mat-raised-button color="accent" (click)="editar(guia)">Editar</button>    
-            <button mat-raised-button color="warn" (click)="eliminar(guia)">Eliminar</button>    
+            <button mat-raised-button class="formActions" color="accent" (click)="editar(guia)">Editar</button>    
+            <button mat-raised-button class="formActions" color="warn" (click)="eliminar(guia)">Eliminar</button>    
             </td>
         </ng-container>
 

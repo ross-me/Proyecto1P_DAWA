@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { TransportejsonService } from './transportejson.service';
+import { TransportejsonService } from '../ServiciosTransportes/transportejson.service';
 
 describe('TransportejsonService', () => {
   let service: TransportejsonService;

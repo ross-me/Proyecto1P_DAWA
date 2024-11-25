@@ -1,31 +1,31 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { Transporte } from '../../../models/transporte';
+import { Transporte } from '../../models/transporte';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import {TransportejsonService} from '../../services/transportejson.service'
+import {TransportejsonService} from '../../services/ServiciosTransportes/transportejson.service'
 import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatRadioButton } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MyDialogComponent } from '../shared/my-dialog/my-dialog.component';
+import { DialogoConfirmacion } from '../shared/Dialogo-Confirmacion/dialogo-confirmacion.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-crud-transporte',
   standalone: true,
   imports: [MatFormField, MatLabel, MatButtonModule, MatInputModule, MatTableModule, MatPaginatorModule,
-    MatRadioButton, MatSelectModule, MatCheckboxModule, MatOptionModule, MatFormFieldModule,
-    MatNativeDateModule, ReactiveFormsModule
+    MatSelectModule, MatCheckboxModule, MatOptionModule, MatFormFieldModule,
+    MatNativeDateModule, ReactiveFormsModule, MatDividerModule
   ],
   templateUrl: './crud-transporte.component.html',
   styleUrl: './crud-transporte.component.css'
 })
 export class CrudTransporteComponent implements OnInit, AfterViewInit{
-  title="CRUD de Transportes";
+  Title="CRUD de Transportes";
   form!:FormGroup;
   isEditMode: boolean=false;
   currentId!:number;
@@ -69,7 +69,7 @@ export class CrudTransporteComponent implements OnInit, AfterViewInit{
 
   }
   eliminar(transporte:Transporte){
-    const dialogRef= this.mydialog.open(MyDialogComponent,{
+    const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: "Eliminacion del Transporte",
         contenido: "Estas seguro de eliminar " +transporte.brand +"?"

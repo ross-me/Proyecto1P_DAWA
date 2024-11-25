@@ -2,29 +2,30 @@ import { OnInit, AfterViewInit,Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { Guia } from '../../../models/Guia';
-import { GuiasjsonService } from '../../services/guiasjson.service';
+import { Guia } from '../../models/Guia';
+import { GuiasjsonService } from '../../services/ServiciosGuias/guiasjson.service';
 import { MatDialog } from '@angular/material/dialog';
-import { MyDialogComponent } from '../shared/my-dialog/my-dialog.component';
+import { DialogoConfirmacion } from '../shared/Dialogo-Confirmacion/dialogo-confirmacion.component';
 import { MatNativeDateModule, MatOptionModule, _MatInternalFormField } from '@angular/material/core';
 import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatRadioButton } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-crud-guias-turisticos',
   standalone: true,
   imports: [MatFormField, MatLabel, MatButtonModule, MatInputModule, MatTableModule, MatPaginatorModule,
-    MatRadioButton, MatSelectModule, MatCheckboxModule, MatOptionModule,MatFormFieldModule,
-    ReactiveFormsModule, MatNativeDateModule
+    MatSelectModule, MatCheckboxModule, MatOptionModule,MatFormFieldModule,
+    ReactiveFormsModule, MatNativeDateModule, MatDividerModule
   ],
   templateUrl: './crud-guias-turisticos.component.html',
   styleUrl: './crud-guias-turisticos.component.css'
 })
 export class CrudGuiasTuristicosComponent {
+  Title = 'CRUD de Guías Turísticos';
   form!:FormGroup;
   isEditMode: boolean=false;
   currentId!:number;
@@ -70,7 +71,7 @@ export class CrudGuiasTuristicosComponent {
   }
 
   eliminar(guia:Guia){
-    const dialogRef= this.mydialog.open(MyDialogComponent,{
+    const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: "Eliminacion de guia",
         contenido: "Estas seguro de eliminar al guia " +guia.name +"?"

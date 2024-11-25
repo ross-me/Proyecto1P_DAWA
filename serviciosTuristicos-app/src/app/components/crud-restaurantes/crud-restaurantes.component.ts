@@ -1,11 +1,11 @@
 import { OnInit,  AfterViewInit, Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { Restaurante } from '../../../models/restaurante'
+import { Restaurante } from '../../models/restaurante'
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { RestaurantesService } from '../../services/restaurantes-services.service';
+import { RestaurantesService } from '../../services/ServiciosRestaurantes/restaurantes-services.service';
 import { MatDialog } from '@angular/material/dialog';
-import { MyDialogComponent } from '../shared/my-dialog/my-dialog.component';
+import { DialogoConfirmacion } from '../shared/Dialogo-Confirmacion/dialogo-confirmacion.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -13,13 +13,14 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-crud-restaurantes',
   standalone: true,
   imports: [MatButtonModule, MatInputModule, MatTableModule, MatPaginatorModule,
     MatRadioModule, MatSelectModule, MatCheckboxModule, MatOptionModule,MatFormFieldModule,
-    MatNativeDateModule, ReactiveFormsModule
+    MatNativeDateModule, ReactiveFormsModule, MatDividerModule
   ],
   templateUrl: './crud-restaurantes.component.html',
   styleUrl: './crud-restaurantes.component.css'
@@ -70,7 +71,7 @@ export class CrudRestaurantesComponent {
   }
 
   eliminar(Restaurante:Restaurante){
-    const dialogRef= this.mydialog.open(MyDialogComponent,{
+    const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: "Eliminacion de Restaurante",
         contenido: "Estas seguro de eliminar el Restaurante " +Restaurante.Nombre +"?"

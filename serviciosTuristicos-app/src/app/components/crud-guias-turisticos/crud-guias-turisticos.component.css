@@ -1,3 +1,16 @@
+h2{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+mat-divider{
+    width:85%;
+    margin: 0 auto; 
+    display: block;
+    padding:5px;
+}
+
 .search-container{
     margin: 20px;
     border-top: 1px solid #aaa;
@@ -16,10 +29,9 @@ form{
     border-radius: 10px;
     padding: 10px;
 }
-h2{
-    text-align: center;
+
+.formActions{
     margin: 10px;
-    border-bottom: 1px solid #aaa;
 }
 
 body{

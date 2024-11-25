@@ -1,11 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { Excursion } from '../../../models/Excursion';
+import { Excursion } from '../../models/Excursion';
 import { MatPaginator } from '@angular/material/paginator';
-import { ExcursionesjsonService } from '../../services/excursionesjson.service';
+import { ExcursionesjsonService } from '../../services/ServiciosExcursiones/excursionesjson.service';
 import { MatDialog } from '@angular/material/dialog';
-import { DialogData, MyDialogComponent } from '../shared/my-dialog/my-dialog.component';
+import { DialogData, DialogoConfirmacion } from '../shared/Dialogo-Confirmacion/dialogo-confirmacion.component';
 import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -69,7 +69,7 @@ export class CrudExcursionesComponent {
   }
 
   eliminar(excursion:Excursion){
-    const dialogRef = this.myDialog.open(MyDialogComponent,{
+    const dialogRef = this.myDialog.open(DialogoConfirmacion,{
       data:{
         titulo: excursion.name,
         contenido: "Estas seguro de eliminar la" + excursion.name

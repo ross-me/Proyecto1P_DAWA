@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
-import { Transporte } from '../../../models/transporte';
-import { TransportejsonService } from '../../services/transportejson.service';
+import { Transporte } from '../../models/transporte';
+import { TransportejsonService } from '../../services/ServiciosTransportes/transportejson.service';
 import { CurrencyPipe, UpperCasePipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
-import { MyDialogComponent } from '../shared/my-dialog/my-dialog.component';
+import { DialogoConfirmacion } from '../shared/Dialogo-Confirmacion/dialogo-confirmacion.component';
+import { DialogoExito } from "../shared/Dialogo-Exito/dialogo-exito.component";
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-transporte',
   standalone: true,
-  imports: [UpperCasePipe, CurrencyPipe, MatCardModule, MatIconModule, MatButtonModule],
+  imports: [UpperCasePipe, CurrencyPipe, MatCardModule, MatIconModule, MatButtonModule, MatDividerModule],
   templateUrl: './transporte.component.html',
   styleUrl: './transporte.component.css'
 })
@@ -34,7 +36,7 @@ export class TransporteComponent {
     });
   }
   Reservar(transport:Transporte):void{
-    const dialogRef= this.mydialog.open(MyDialogComponent,{
+    const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: transport.brand,
         contenido:" ha sido reservado "
@@ -42,7 +44,16 @@ export class TransporteComponent {
     });
     dialogRef.afterClosed().subscribe(result=>{
       if(result === "aceptar"){
-        console.log("Aceptar");
+        const dialogRef= this.mydialog.open(DialogoExito,{
+          data:{
+            titulo: "Reserva Realizada",
+            contenido:" Realizaste una reserva del: \"" +transport.brand+"\"."
+          }
+        });
+        dialogRef.afterClosed().subscribe(result=>{
+          if(result === "aceptar"){
+            console.log("Aceptar");
+        }});
       }else if(result === "cancelar"){
         console.error("Cancelar");
       }

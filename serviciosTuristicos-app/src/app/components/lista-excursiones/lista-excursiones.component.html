@@ -1,4 +1,4 @@
-<h3>{{title}}</h3>
+<h2>{{title}}</h2>
 <mat-divider></mat-divider>
 @if(excursions.length===0){
     <p>No hay excursiones para mostrar.</p>
@@ -20,7 +20,7 @@
                     <p><mat-icon>language</mat-icon> {{excursion.guideLanguage}}</p>
                     <p class="price"><strong>{{excursion.price | currency:"USD"}}</strong></p>
                 </mat-card-content>
-                <mat-card-actions>
+                <mat-card-actions class="btnReservar">
                     <button mat-flat-button (click)="reservar(excursion)">
                     <mat-icon>event available</mat-icon>
                     Reservar</button>    

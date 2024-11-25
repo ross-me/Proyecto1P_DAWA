@@ -12,11 +12,16 @@ form{
     padding: 15px;
 }
 
-.actions{
+/*.actions{
     padding:10px;
     display: flex;
     justify-content: center;
     gap:15px;
+}
+*/
+
+.formActions{
+    margin: 10px;
 }
 
 mat-paginator{

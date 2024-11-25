@@ -1,4 +1,18 @@
 
+h2{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+mat-divider{
+    width:85%;
+    margin: 0 auto; 
+    display: block;
+    padding:5px;
+    padding-bottom: 15px;
+}
+
 mat-card-header {
     display: flex;
     justify-content: center; 
@@ -23,14 +37,17 @@ mat-card-header {
 
 .guia-card {
     display: flex;
+    border: 2px solid #ddd;
     flex-direction: column;
     justify-content: space-between; 
     align-items: stretch; 
     margin-bottom: 1rem; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     flex: 1 1 30%; 
     height: 100%; 
 }
 .guia-card:hover{
+    transform: translateY(-10px);
     box-shadow: 0px 8px 8px 0px #aaa;
     
 }
@@ -38,7 +55,13 @@ mat-card-header {
 .center-button {
     display: flex;
     justify-content: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
+
+.center-button:hover {
+    transform: translateY(-3px);
+}
+
 .veh{
     text-align: left;
     font-style: italic;

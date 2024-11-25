@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ActividadesjsonService } from './actividadesjson.service';
+import { ActividadesjsonService } from '../ServiciosActividades/actividadesjson.service';
 
 describe('ActividadesjsonService', () => {
   let service: ActividadesjsonService;

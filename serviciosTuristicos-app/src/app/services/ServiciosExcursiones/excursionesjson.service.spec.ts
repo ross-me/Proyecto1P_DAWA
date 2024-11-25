@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ExcursionesjsonService } from './excursionesjson.service';
+import { ExcursionesjsonService } from '../ServiciosExcursiones/excursionesjson.service';
 
 describe('ExcursionesjsonService', () => {
   let service: ExcursionesjsonService;

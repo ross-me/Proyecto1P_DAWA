@@ -1,23 +1,26 @@
 import { Component } from '@angular/core';
-import { Excursion } from '../../../models/Excursion';
-import { ExcursionesjsonService } from '../../services/excursionesjson.service';
+import { Excursion } from '../../models/Excursion';
+import { ExcursionesjsonService } from '../../services/ServiciosExcursiones/excursionesjson.service';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CurrencyPipe } from '@angular/common';
+import { DialogoConfirmacion } from "../shared/Dialogo-Confirmacion/dialogo-confirmacion.component";
+import { DialogoExito } from "../shared/Dialogo-Exito/dialogo-exito.component";
 import {MatDividerModule} from '@angular/material/divider';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-lista-excursiones',
   standalone: true,
-  imports: [MatCardModule,MatIconModule, MatButtonModule, CurrencyPipe, MatDividerModule],
+  imports: [MatCardModule,MatIconModule, MatButtonModule, CurrencyPipe, MatDividerModule, MatDividerModule],
   templateUrl: './lista-excursiones.component.html',
   styleUrl: './lista-excursiones.component.css'
 })
 export class ListaExcursionesComponent {
-  title="Excursiones";
+  title="Lista de Excursiones";
   excursions: Excursion[]=[];
-  constructor(private miServicio:ExcursionesjsonService){
+  constructor(private miServicio:ExcursionesjsonService, private mydialog:MatDialog){
   }
 
   ngOnInit():void{
@@ -31,6 +34,27 @@ export class ListaExcursionesComponent {
   }
 
   reservar(excursion:Excursion):void{
-    alert("Reservaste la " +excursion.name);
+    const dialogRef= this.mydialog.open(DialogoConfirmacion,{
+      data:{
+        titulo: excursion.name,
+        contenido:" Reservado con exito "
+      }
+    });
+    dialogRef.afterClosed().subscribe(result=>{
+      if(result === "aceptar"){
+        const dialogRef= this.mydialog.open(DialogoExito,{
+          data:{
+            titulo: "Reserva Realizada",
+            contenido:" Realizaste una reserva de: \"" +excursion.name+"\"."
+          }
+        });
+        dialogRef.afterClosed().subscribe(result=>{
+          if(result === "aceptar"){
+            console.log("Aceptar");
+        }});
+      }else if(result === "cancelar"){
+        console.error("Cancelar");
+      }
+    })
   }
 }

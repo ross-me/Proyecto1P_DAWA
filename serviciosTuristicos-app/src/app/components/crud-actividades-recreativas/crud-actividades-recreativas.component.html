@@ -1,6 +1,7 @@
 <!--Formularios reactivos de angular-->
+<h2>{{Title}}</h2>
+<mat-divider></mat-divider>
 <div class="container">
-  <h2>CRUD Actividades Recreativas</h2>
   <form [formGroup]="form" class="ocultar" (submit)="onSubmit()">
       <mat-form-field class="formElement">
           <mat-label>Nombre:</mat-label>
@@ -89,8 +90,8 @@
           
       <mat-checkbox class="formElement" formControlName="rating">Solo mayores de 16</mat-checkbox>
         <div>
-          <button mat-raised-button color="primary" type="submit">Guardar</button>    
-          <button mat-raised-button color="primary" type="reset" (click)="clearForm()">Cancelar</button>   
+          <button mat-raised-button class="formActions" color="primary" type="submit">Guardar</button>    
+          <button mat-raised-button class="formActions" color="primary" type="reset" (click)="clearForm()">Cancelar</button>   
         </div>
 
   </form>
@@ -127,8 +128,8 @@
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef> Acciones </th>
       <td mat-cell *matCellDef="let actividad"> 
-      <button mat-raised-button color="accent" (click)="editar(actividad)">Editar</button>    
-      <button mat-raised-button color="warn" (click)="eliminar(actividad)">Eliminar</button>    
+      <button mat-raised-button class="formActions" color="accent" (click)="editar(actividad)">Editar</button>    
+      <button mat-raised-button class="formActions" color="warn" (click)="eliminar(actividad)">Eliminar</button>    
       </td>
     </ng-container>
     

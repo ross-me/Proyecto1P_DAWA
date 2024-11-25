@@ -103,9 +103,9 @@
            </mat-error>
       </mat-form-field>
 
-        <div class="actions">
-          <button mat-raised-button color="primary" type="submit">Guardar</button>
-          <button mat-raised-button color="primary" type="reset" (click)="clearForm()">Cancelar</button>
+        <div>
+          <button mat-raised-button class="formActions" color="primary" type="submit">Guardar</button>
+          <button mat-raised-button class="formActions" color="primary" type="reset" (click)="clearForm()">Cancelar</button>
         </div>
       </form>
 
@@ -142,8 +142,8 @@
     <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef>Acciones</th>
         <td mat-cell *matCellDef="let excursion"> 
-            <button mat-raised-button color="accent" (click)="editar(excursion)">Editar</button>
-            <button mat-raised-button color="warn" (click)="eliminar(excursion)">Eliminar</button>
+            <button mat-raised-button class="formActions" color="accent" (click)="editar(excursion)">Editar</button>
+            <button mat-raised-button class="formActions" color="warn" (click)="eliminar(excursion)">Eliminar</button>
         </td>
       </ng-container>
 
