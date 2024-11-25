@@ -109,7 +109,7 @@
       "years_of_experience": "Más de 5 años",
       "excursion": "Tour de senderismo",
       "image": "https://images.unsplash.com/photo-1513097847644-f00cfe868607?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fG11amVyfGVufDB8MXwwfHx8MA%3D%3D"
-  }
+    }
   ],
   "transporte": [
     {
@@ -254,7 +254,7 @@
     {
       "name": "Excursión a Los Túneles",
       "description": "Descubre los tesoros ocultos de la Isla Isabela y bucea a través de los impresionantes túneles de lava junto a la preciosa fauna. ¡No te lo puedes perder!",
-      "duration": 7,
+      "duration": 6,
       "guideLanguage": "Español",
       "price": 155,
       "image": "https://happygringo.com/wp-content/uploads/2021/08/los-tuneles-galapagos-landscape.jpg",
@@ -282,7 +282,7 @@
       "id": "4",
       "name": "Excursión a la reserva Manglares Churute",
       "description": "Descubre la fauna y flora de Ecuador con esta excursión a la reserva Manglares de Churute, uno de los ecosistemas más asombrosos del golfo de Guayaquil.",
-      "duration": 6,
+      "duration": 7,
       "guideLanguage": "Español",
       "price": 65,
       "image": "https://www.turisec.com/wp-content/uploads/2022/12/paisajes-manglares-churute-1.jpg"

@@ -6,7 +6,7 @@ h3{
 
 .contenido{
     display:flex;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center; 
     align-items: center;
     flex-wrap: wrap; 
     gap: 10px;
@@ -47,6 +47,13 @@ mat-card-actions{
 
 .price{
     text-align: center;
+}
+
+mat-divider{
+    width:85%;
+    margin: 0 auto; 
+    display: block;
+    padding:5px;
 }
 
 

@@ -5,16 +5,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { CurrencyPipe } from '@angular/common';
+import {MatDividerModule} from '@angular/material/divider';
 
 @Component({
   selector: 'app-lista-excursiones',
   standalone: true,
-  imports: [MatCardModule,MatIconModule, MatButtonModule, CurrencyPipe],
+  imports: [MatCardModule,MatIconModule, MatButtonModule, CurrencyPipe, MatDividerModule],
   templateUrl: './lista-excursiones.component.html',
   styleUrl: './lista-excursiones.component.css'
 })
 export class ListaExcursionesComponent {
-  title="Lista de Excursiones";
+  title="Excursiones";
   excursions: Excursion[]=[];
   constructor(private miServicio:ExcursionesjsonService){
   }

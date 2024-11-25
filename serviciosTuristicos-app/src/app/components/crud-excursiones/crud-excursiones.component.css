@@ -1,0 +1,39 @@
+h2{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+form{
+    margin: 20px;
+    margin-bottom: 40px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.actions{
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    gap:15px;
+}
+
+mat-paginator{
+    margin-top: 20px;
+}
+
+.formElement{
+    margin:10px;
+}
+
+.search-container button{
+    margin-left: 15px;
+}
+
+mat-divider{
+    width:85%;
+    margin: 0 auto; 
+    display: block;
+    padding:5px;
+}
