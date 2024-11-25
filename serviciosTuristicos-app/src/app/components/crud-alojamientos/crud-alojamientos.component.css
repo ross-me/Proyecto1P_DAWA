@@ -1,0 +1,115 @@
+/* Estilo para el componente CRUD */
+:host {
+    display: block;
+    padding: 20px;
+    background-color: #FEFFD2;  /* Fondo amarillo claro */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #FF7D29;  /* Título en naranja intenso */
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 100%;
+    max-width: 400px;  /* Limitar el ancho máximo */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #FFBF78;  /* Borde en naranja suave */
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #FFEEA9;  /* Fondo amarillo suave */
+    transition: background-color 0.3s ease;
+    display: block;  /* Asegurar que los campos de entrada no se apilen uno al lado del otro */
+    margin-left: auto;  /* Centrar el input horizontalmente */
+    margin-right: auto;  /* Centrar el input horizontalmente */
+  }
+  
+  input:focus {
+    background-color: #FFBF78;  /* Fondo naranja suave al enfocarse */
+    border-color: #FF7D29;  /* Borde naranja intenso al enfocarse */
+    outline: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #FF7D29;  /* Botón en naranja intenso */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 10px;  /* Espacio entre los botones */
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+  
+  button:hover {
+    background-color: #FFBF78;  /* Botón cambia a naranja suave al hacer hover */
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #FFEEA9;  /* Elementos de la lista con fondo amarillo suave */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  li button {
+    background-color: #FF7D29;  /* Naranja intenso para los botones de eliminar/editar */
+  }
+  
+  li button:hover {
+    background-color: #FFBF78;  /* Naranja suave al hacer hover en los botones */
+  }
+  
+  /* Diseño responsivo para pantallas más pequeñas */
+  @media (max-width: 600px) {
+    :host {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 20px;  /* Reducir tamaño del título */
+    }
+  
+    input {
+      font-size: 14px;
+      padding: 8px;
+      max-width: 90%;  /* Hacer que el input ocupe el 90% del ancho en pantallas pequeñas */
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px 16px;
+      margin-top: 10px;
+      margin-right: 0;  /* Eliminar margen entre los botones */
+      width: 100%;  /* Hacer los botones de ancho completo */
+      margin-bottom: 10px;
+    }
+  
+    li {
+      flex-direction: column;  /* Cambiar a columna para adaptarse mejor a pantallas pequeñas */
+      align-items: flex-start;
+    }
+  
+    li button {
+      width: 100%;  /* Botones de lista ocupan todo el ancho */
+      margin-top: 10px;
+    }
+  }
+  

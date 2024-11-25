@@ -1,0 +1,61 @@
+<div class="crud-container">
+    <h2>CRUD Alojamientos</h2>
+  
+    <!-- Formulario para crear/editar un alojamiento -->
+    <div class="form-container">
+      <input
+        *ngIf="alojamientoSeleccionado"
+        [(ngModel)]="alojamientoSeleccionado.nombre"
+        placeholder="Nombre del alojamiento"
+      />
+      <input
+        *ngIf="alojamientoSeleccionado"
+        [(ngModel)]="alojamientoSeleccionado.precio"
+        type="number"
+        placeholder="Precio del alojamiento"
+      />
+      <input
+        *ngIf="alojamientoSeleccionado"
+        [(ngModel)]="alojamientoSeleccionado.ubicacion"
+        placeholder="Ubicación del alojamiento"
+      />
+  
+      <button *ngIf="alojamientoSeleccionado" (click)="actualizarAlojamiento(alojamientoSeleccionado)">
+        Actualizar Alojamiento
+      </button>
+      <button *ngIf="alojamientoSeleccionado" (click)="cancelarEdicion()">Cancelar</button>
+    </div>
+  
+    <!-- Tabla de alojamientos -->
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Ubicación</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alojamiento of obtenerAlojamientos()">
+          <td>{{ alojamiento.id }}</td>
+          <td>{{ alojamiento.nombre }}</td>
+          <td>{{ alojamiento.precio }}</td>
+          <td>{{ alojamiento.ubicacion }}</td>
+          <td>
+            <button (click)="seleccionarAlojamiento(alojamiento)">Editar</button>
+            <button (click)="eliminarAlojamiento(alojamiento.id)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <!-- Formulario para agregar un nuevo alojamiento -->
+    <div class="form-container">
+      <input [(ngModel)]="nuevoNombre" placeholder="Nuevo Alojamiento" />
+      <input [(ngModel)]="nuevoPrecio" type="number" placeholder="Precio" />
+      <input [(ngModel)]="nuevoUbicacion" placeholder="Ubicación" />
+      <button (click)="crearAlojamiento(nuevoNombre, nuevoPrecio, nuevoUbicacion)">Agregar Alojamiento</button>
+    </div>
+  </div>  
