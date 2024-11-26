@@ -25,7 +25,9 @@ export const routes: Routes = [
     {path:"crud-restaurantes", component: CrudRestaurantesComponent},
     {path:"crud-excursiones", component: CrudExcursionesComponent},
     {path:"crud-alojamientos", component: CrudAlojamientosComponent},
-    {path:"index", component: IndexComponent},
+    {path:"index", component:IndexComponent},
+    {path:"", redirectTo: "index", pathMatch:'full'},
+    {path:"**", redirectTo: "index"},
     
     //rutas por defecto
     
