@@ -2,7 +2,7 @@
 <mat-divider></mat-divider>
 <div class="container">
     <form [formGroup]="form" class="ocultar" (submit)="onSubmit()">
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoMedio">
           <mat-label>Nombre de la Excursión:</mat-label>
           <input matInput type="text" placeholder="nombre" formControlName="name" />
           <mat-error>
@@ -20,7 +20,7 @@
         </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoLargo">
             <mat-label>Descripción:</mat-label>
             <input matInput type="text" placeholder="descripción" formControlName="description"/>
             <mat-error>
@@ -35,7 +35,7 @@
             </mat-error>
         </mat-form-field>
 
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoMedio">
             <mat-label>Duración de la Excursión:</mat-label>
             <input matInput type="number" placeholder="horas" formControlName="duration" />
             <mat-error>
@@ -53,7 +53,7 @@
             </mat-error>
         </mat-form-field>
 
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoMedio">
         <mat-label>Idioma del Guía:</mat-label>
         <mat-select formControlName="guideLanguage">
           <mat-option value="">Seleccione...</mat-option>
@@ -70,7 +70,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoPequeño">
         <mat-label>Precio:</mat-label>
         <input matInput type="number" placeholder="0" formControlName="price" />
        <mat-error>
@@ -88,7 +88,7 @@
        </mat-error>
       </mat-form-field>
 
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoLargo">
         <mat-label>URL de imagen de la excursión:</mat-label>
         <input matInput type="url" placeholder="url" formControlName="image" />
         <mat-error>

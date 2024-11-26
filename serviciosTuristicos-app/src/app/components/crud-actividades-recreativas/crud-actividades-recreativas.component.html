@@ -3,7 +3,7 @@
 <mat-divider></mat-divider>
 <div class="container">
   <form [formGroup]="form" class="ocultar" (submit)="onSubmit()">
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoMedio">
           <mat-label>Nombre:</mat-label>
           <input matInput type="text" placeholder="name" formControlName="name"/>        
           <mat-error>
@@ -21,7 +21,7 @@
           </mat-error> 
         </mat-form-field>
 
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoLargo">
           <mat-label>Descripción:</mat-label>
           <input matInput type="text" placeholder="description" formControlName="description"/>        
           <mat-error>
@@ -39,7 +39,7 @@
           </mat-error> 
         </mat-form-field>
 
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoMedio">
         <mat-label>Categoria:</mat-label>
         <mat-select formControlName="category">
             <mat-option value="">Seleccione...</mat-option>
@@ -56,7 +56,7 @@
           </mat-error> 
       </mat-form-field>     
       
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoPequeño">
           <mat-label>Precio:</mat-label>
           <input matInput type="number" placeholder="0" formControlName="price"/>        
           <mat-error>
@@ -72,7 +72,7 @@
           </mat-error> 
         </mat-form-field>
 
-      <mat-form-field class="formElement">
+      <mat-form-field class="formCampoLargo">
           <mat-label>Url de imagen de la actividad:</mat-label>
           <input matInput type="url" placeholder="url" formControlName="image"/>    
           <mat-error>

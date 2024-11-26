@@ -37,7 +37,7 @@ export class ListaExcursionesComponent {
     const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: excursion.name,
-        contenido:" Reservado con exito "
+        contenido:" ¿Quieres realizar la reserva? "
       }
     });
     dialogRef.afterClosed().subscribe(result=>{

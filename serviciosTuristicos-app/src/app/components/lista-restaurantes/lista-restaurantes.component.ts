@@ -38,7 +38,7 @@ export class ListaRestaurantesComponent {
     const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: restaurante.Nombre,
-        contenido:" ha sido reservado "
+        contenido:" ¿Quieres reservar este restaurante? "
       }
     });
     dialogRef.afterClosed().subscribe(result=>{

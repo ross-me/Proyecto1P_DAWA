@@ -39,7 +39,7 @@ export class ListaGuiasTuristicosComponent {
     const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: guide.name,
-        contenido:" ha sido contratado "
+        contenido:"¿Quieres a este guia para tu visita?"
       }
     });
     dialogRef.afterClosed().subscribe(result=>{

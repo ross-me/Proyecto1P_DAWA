@@ -15,6 +15,11 @@ mat-divider{
     margin-left: 20px;
 }
 
+.search-container button {
+    margin: 10px;
+    transform: translateY(-22%);
+}
+
 .formActions{
     margin: 10px;
 }

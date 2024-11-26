@@ -39,7 +39,7 @@ export class TransporteComponent {
     const dialogRef= this.mydialog.open(DialogoConfirmacion,{
       data:{
         titulo: transport.brand,
-        contenido:" ha sido reservado "
+        contenido:"¿Quieres reservar este vehículo? "
       }
     });
     dialogRef.afterClosed().subscribe(result=>{

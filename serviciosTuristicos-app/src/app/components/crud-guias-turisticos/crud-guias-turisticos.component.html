@@ -3,7 +3,7 @@
 <!--Formularios reactivos de angular-->
 <div class="container">
     <form [formGroup]="form" class="ocultar" (submit)="onSubmit()">
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoMedio">
             <mat-label>Nombre:</mat-label>
             <input matInput type="text" placeholder="name" formControlName="name"/>        
             <mat-error>
@@ -20,7 +20,7 @@
             }
             </mat-error> 
         </mat-form-field>
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoPequeño">
             <mat-label>Edad:</mat-label>
             <input matInput type="number" placeholder="0" formControlName="age"/>        
             <mat-error>
@@ -36,9 +36,7 @@
             </mat-error> 
         </mat-form-field>
         
-        <mat-checkbox class="formElement" formControlName="vehicle">Dispone de vehículo</mat-checkbox>
-        
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoMedio">
             <mat-label>Años de experiencia:</mat-label>
             <mat-select formControlName="years_of_experience">
                 <mat-option value="">Seleccione...</mat-option>
@@ -56,7 +54,7 @@
                 }
             </mat-error> 
         </mat-form-field>     
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoMedio">
             <mat-label>Excursiones a cargo:</mat-label>
             <input matInput type="text" placeholder="excursion" formControlName="excursion"/>        
             <mat-error>
@@ -70,10 +68,12 @@
             }
             </mat-error> 
         </mat-form-field>
-        <mat-form-field class="formElement">
+        <mat-form-field class="formCampoLargo">
             <mat-label>Url de foto del guia:</mat-label>
             <input matInput type="url" placeholder="url" formControlName="image"/>    
         </mat-form-field>
+
+        <mat-checkbox class="formElement" formControlName="vehicle">Dispone de vehículo</mat-checkbox>
 
         <div>
             <button mat-raised-button class="formActions" color="primary" type="submit">Guardar</button>    
