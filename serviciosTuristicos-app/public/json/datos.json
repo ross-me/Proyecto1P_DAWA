@@ -57,13 +57,13 @@
   ],
   "guias": [
     {
-      "id": "1",
       "name": "Juan Pérez",
       "age": 32,
       "vehicle": false,
       "years_of_experience": "0-1 año",
       "excursion": "Excursión a la montaña",
-      "image": "https://plus.unsplash.com/premium_photo-1661761608748-f9cfdea20173?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGhvbWJyZXxlbnwwfDF8MHx8fDA%3D"
+      "image": "https://plus.unsplash.com/premium_photo-1661761608748-f9cfdea20173?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjF8fGhvbWJyZXxlbnwwfDF8MHx8fDA%3D",
+      "id": "1"
     },
     {
       "id": "2",
@@ -248,6 +248,15 @@
       "Direccion": "Local 6, Avenida La Puntilla Centro Comercial Plaza Lagos, Guayaquil",
       "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b2/0a/be/iembarcadero-41.jpg?w=900&h=500&s=1",
       "id": "5"
+    },
+    {
+      "id": "defe",
+      "Nombre": "awdwadawd",
+      "Tipo": "Internacional",
+      "Especialidad": "awdawdawdawd",
+      "Calificacion": 1,
+      "Direccion": "awdawdawdawdaw",
+      "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/4b/7c/67/el-patio.jpg?w=600&h=600&s=1"
     }
   ],
   "excursiones": [

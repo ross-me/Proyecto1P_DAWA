@@ -1,26 +1,28 @@
-import { Component, Inject} from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
-import { MatIconModule } from '@angular/material/icon';
+import { Component, Inject } from '@angular/core';
+import { MAT_SNACK_BAR_DATA, MatSnackBar, MatSnackBarRef } from '@angular/material/snack-bar';
 
-export interface DialogData{
-  titulo: string;
+export interface SnackBarData {
   contenido: string;
 }
 
 @Component({
-  selector: 'dialogo-exito',
-  standalone: true,
-  imports: [MatDialogModule, MatIconModule, MatCardModule],
-  templateUrl: '../Dialogo-Exito/dialogo-exito.component.html',
-  styleUrl: '../Dialogo-Exito/dialogo-exito.component.css'
+  selector: 'app-snack-bar-exito',
+  templateUrl: './snackbar-exito.component.html',
+  styleUrls: ['./snackbar-exito.component.css'],
 })
-export class DialogoExito {
-  constructor(public dialogRef:MatDialogRef<MatDialogModule>,
-    @Inject(MAT_DIALOG_DATA) public data:DialogData){
-    }
-  
-  onAceptar():void{
-    this.dialogRef.close("aceptar");
+export class SnackBarExito {
+  constructor(
+    public snackBarRef: MatSnackBarRef<SnackBarExito>,
+    @Inject(MAT_SNACK_BAR_DATA) public data: SnackBarData
+  ) {}
+
+  static showSnackBar(snackBar: MatSnackBar, message: string) {
+    snackBar.openFromComponent(SnackBarExito, {
+      data: { contenido: message },
+      duration: 10000,
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+    });
   }
 }
+

@@ -13,6 +13,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
+import { SnackBarExito } from "../shared/SnackBar-Exito/snackbar-exito.component";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-crud-actividades-recreativas',
@@ -51,7 +53,7 @@ export class CrudActividadesRecreativasComponent {
   
   }
   constructor(private activityService: ActividadesjsonService, private fb:FormBuilder, 
-    private mydialog: MatDialog ){
+    private mydialog: MatDialog, private snackBar: MatSnackBar ){
     
   }
 
@@ -85,7 +87,7 @@ export class CrudActividadesRecreativasComponent {
     dialogRef.afterClosed().subscribe(result=>{
       if(result==="aceptar"){//que quiero que suceda si dio click en aceptar //si el usuario dio click en aceptar
         this.activityService.deleteActivity(actividad).subscribe(()=>{
-          alert("Eliminado exitosamente");
+          SnackBarExito.showSnackBar(this.snackBar, `Actividad "${actividad.name}" eliminada exitosamente.`);
           this.getActivities();//para que see actualice el datasource
         });
       }else if(result==="cancelar"){
@@ -128,12 +130,12 @@ export class CrudActividadesRecreativasComponent {
     if(this.isEditMode){//editar
       newActividad.id=this.currentId;
       this.activityService.updateActivity(newActividad).subscribe((updateActividad)=>{
-          alert("Actividad editada exitosamente");
+        SnackBarExito.showSnackBar(this.snackBar, `Actividad "${newActividad.name}" editada exitosamente.`);
           this.getActivities(); //acualizar data source de la tabla de act
       });
     }else{//agregar
       this.activityService.addActivity(newActividad).subscribe((updateActividad)=>{
-        alert("Actividad agregada exitosamente");
+        SnackBarExito.showSnackBar(this.snackBar, `Actividad "${newActividad.name}" agregada exitosamente.`);
         this.getActivities(); //acualizar data source de la tabla de act
     });
     }

@@ -14,6 +14,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
+import { SnackBarExito } from "../shared/SnackBar-Exito/snackbar-exito.component";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-crud-restaurantes',
@@ -49,7 +51,7 @@ export class CrudRestaurantesComponent {
   
   }
   constructor(private RestaurantesService: RestaurantesService, private fb:FormBuilder, 
-    private mydialog: MatDialog ){
+    private mydialog: MatDialog, private snackBar: MatSnackBar ){
     
   }
 
@@ -82,7 +84,7 @@ export class CrudRestaurantesComponent {
     dialogRef.afterClosed().subscribe(result=>{
       if(result==="aceptar"){
         this.RestaurantesService.deleteRestaurantes(Restaurante).subscribe(()=>{
-          alert("Eliminado exitosamente");
+          SnackBarExito.showSnackBar(this.snackBar, `Restaurante "${Restaurante.Nombre}" eliminado exitosamente.`);
           this.getRestaurantes();
         });
       }else if(result==="cancelar"){
@@ -120,12 +122,12 @@ export class CrudRestaurantesComponent {
     if(this.isEditMode){
       newRestaurante.id=this.currentId;
       this.RestaurantesService.updateRestaurantes(newRestaurante).subscribe((updateRestaurantes)=>{
-          alert("Restaurante editado exitosamente");
-          this.getRestaurantes();
+        SnackBarExito.showSnackBar(this.snackBar, `Restaurante "${newRestaurante.Nombre}" editado exitosamente.`);
+        this.getRestaurantes();
       });
     }else{
       this.RestaurantesService.addRestaurantes(newRestaurante).subscribe((addRestaurantes)=>{
-        alert("Restaurante agregado exitosamente");
+        SnackBarExito.showSnackBar(this.snackBar, `Restaurante "${newRestaurante.Nombre}" agregado exitosamente.`);
         this.getRestaurantes();
     });
     }
@@ -144,6 +146,4 @@ export class CrudRestaurantesComponent {
     this.currentId=0;
     this.isEditMode=false;
   }
-
-
 }

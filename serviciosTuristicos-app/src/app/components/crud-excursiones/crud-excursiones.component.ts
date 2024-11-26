@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatDivider } from '@angular/material/divider';
+import { SnackBarExito } from "../shared/SnackBar-Exito/snackbar-exito.component";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-crud-excursiones',
@@ -48,7 +50,7 @@ export class CrudExcursionesComponent {
     });
   }
 
-  constructor(private excursionService:ExcursionesjsonService, private fb:FormBuilder, private myDialog:MatDialog){
+  constructor(private excursionService:ExcursionesjsonService, private fb:FormBuilder, private myDialog:MatDialog, private snackBar: MatSnackBar){
   }
   
   getExcursions():void{
@@ -78,7 +80,7 @@ export class CrudExcursionesComponent {
     dialogRef.afterClosed().subscribe(result=>{
       if(result==="aceptar"){ 
         this.excursionService.deleteExcursion(excursion).subscribe(()=>{
-          alert("Eliminado exitosamente");
+          SnackBarExito.showSnackBar(this.snackBar, `Excursion "${excursion.name}" eliminada exitosamente.`);
           this.getExcursions();
         });
       }else if(result==="cancelar"){
@@ -119,13 +121,13 @@ export class CrudExcursionesComponent {
     if(this.isEditMode){
       newExcursion.id=this.currentId;
       this.excursionService.updateExcursion(newExcursion).subscribe((updateExcursion)=>{
-        alert("Excursión actualizada con éxito");
+        SnackBarExito.showSnackBar(this.snackBar, `Excursión "${newExcursion.name}" editada exitosamente.`);
         this.getExcursions();
       });
 
     }else{
       this.excursionService.addExcursion(newExcursion).subscribe((addExcursion)=>{
-        alert("Excursión agregada con éxito");
+        SnackBarExito.showSnackBar(this.snackBar, `Excursión "${newExcursion.name}" agregada exitosamente.`);
         this.getExcursions();
       });
     }

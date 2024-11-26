@@ -2,37 +2,38 @@
 .encabezado{
     background-color: rgb(92, 69, 34);
     padding: 20px;
-
+    display: flex;
+    align-items: center;
 }
+
 .encabezado h1{
     text-align: center;
     color: white;
+    margin-left: 10px;
 }
 
-/*a{
-    text-decoration: none;
-    padding: 5px;
-    background-color: rgb(160, 131, 160);
+.Nombre-Pagina {
+    font-size: 2.50rem;
+    font-weight: bold;
     color: white;
-    border: 1px solid rgb(212, 210, 212);
-}*/
-/*.active{
-    background-color: rgb(151, 104, 34);
-    color: rgb(255, 255, 255);
-}*/
+  }
+
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    
+}
+
+.logo {
+    border-radius: 100%;
+    margin-right: 15px;
+    height: 75px;
+    width: auto;
 }
 
 nav{
-    
     margin: auto;
     background-color: rgb(102, 66, 45);
-    margin-top: 50px;
-    
 }
 
 .menu-horizontal{
@@ -55,7 +56,7 @@ nav{
     list-style: none;
     width: 250px;
     background-color: rgb(133, 106, 66);
-    z-index: 10; /* Eleva el submenú sobre otros elementos */
+    z-index: 10;
 }
 .menu-horizontal li:hover .menu-vertical{
     display: block;

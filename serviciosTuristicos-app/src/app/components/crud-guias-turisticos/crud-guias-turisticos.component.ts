@@ -13,6 +13,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDividerModule } from '@angular/material/divider';
+import { SnackBarExito } from "../shared/SnackBar-Exito/snackbar-exito.component";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-crud-guias-turisticos',
@@ -49,7 +51,7 @@ export class CrudGuiasTuristicosComponent {
   
   }
   constructor(private guideService: GuiasjsonService, private fb:FormBuilder, 
-    private mydialog: MatDialog ){
+    private mydialog: MatDialog, private snackBar: MatSnackBar ){
     
   }
 
@@ -81,7 +83,7 @@ export class CrudGuiasTuristicosComponent {
     dialogRef.afterClosed().subscribe(result=>{
       if(result==="aceptar"){
         this.guideService.deleteGuide(guia).subscribe(()=>{
-          alert("Eliminado exitosamente");
+          SnackBarExito.showSnackBar(this.snackBar, `Guía "${guia.name}" eliminado exitosamente.`);
           this.getGuides();
         });
       }else if(result==="cancelar"){
@@ -122,12 +124,12 @@ export class CrudGuiasTuristicosComponent {
     if(this.isEditMode){//editar
       newGuia.id=this.currentId;
       this.guideService.updateGuide(newGuia).subscribe((updateGuia)=>{
-          alert("Guia editado exitosamente");
+        SnackBarExito.showSnackBar(this.snackBar, `Guía "${newGuia.name}" editado exitosamente.`);
           this.getGuides();
       });
     }else{//agregar
       this.guideService.addGuide(newGuia).subscribe((updateGuia)=>{
-        alert("Guia agregado exitosamente");
+        SnackBarExito.showSnackBar(this.snackBar, `Guía "${newGuia.name}" agregado exitosamente.`);
         this.getGuides();
     });
     }

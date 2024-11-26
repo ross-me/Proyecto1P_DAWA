@@ -13,6 +13,8 @@ import { MatNativeDateModule, MatOptionModule } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogoConfirmacion } from '../shared/Dialogo-Confirmacion/dialogo-confirmacion.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { SnackBarExito } from "../shared/SnackBar-Exito/snackbar-exito.component";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-crud-transporte',
@@ -48,7 +50,7 @@ export class CrudTransporteComponent implements OnInit, AfterViewInit{
     })
   }
 
-  constructor(private transportService:TransportejsonService, private fb: FormBuilder, private mydialog: MatDialog){
+  constructor(private transportService:TransportejsonService, private fb: FormBuilder, private mydialog: MatDialog, private snackBar: MatSnackBar){
 
   }
 
@@ -80,7 +82,7 @@ export class CrudTransporteComponent implements OnInit, AfterViewInit{
     dialogRef.afterClosed().subscribe(result=>{
       if(result==="aceptar"){
         this.transportService.deletetransport(transporte).subscribe(()=>{
-          alert("Eliminacion exitosa");
+          SnackBarExito.showSnackBar(this.snackBar, `Vehículo "${transporte.brand}" eliminado exitosamente.`);
           this.gettransport();
         });
       }else if(result==="cancelar"){
@@ -121,12 +123,12 @@ export class CrudTransporteComponent implements OnInit, AfterViewInit{
     if(this.isEditMode){
       newTransporte.id=this.currentId;
       this.transportService.updatetransport(newTransporte).subscribe((updateTransport)=>{
-          alert("Transporte editado exitosamente");
+          SnackBarExito.showSnackBar(this.snackBar, `Vehículo "${newTransporte.brand}" editado exitosamente.`);
           this.gettransport();
       });
     }else{
       this.transportService.addtransport(newTransporte).subscribe((addTransport)=>{
-        alert("Transporte agregado exitosamente");
+        SnackBarExito.showSnackBar(this.snackBar, `Vehículo "${newTransporte.brand}" agregado exitosamente.`);
         this.gettransport();
     });
     }
