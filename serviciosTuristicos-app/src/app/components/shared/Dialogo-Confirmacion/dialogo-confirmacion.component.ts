@@ -19,11 +19,9 @@ export class DialogoConfirmacion {
     }
   
   onAceptar():void{
-    //qui faltab true
-    this.dialogRef.close("aceptar");//cierra la ventana de dilogo
+    this.dialogRef.close("aceptar");
   }
   onCancelar():void{
-    //aqui faltaba false para indicaar que fue cancelar
-    this.dialogRef.close("cancelar");//cierra la ventana de dilogo
+    this.dialogRef.close("cancelar");
   }
 }

@@ -248,15 +248,6 @@
       "Direccion": "Local 6, Avenida La Puntilla Centro Comercial Plaza Lagos, Guayaquil",
       "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/b2/0a/be/iembarcadero-41.jpg?w=900&h=500&s=1",
       "id": "5"
-    },
-    {
-      "id": "defe",
-      "Nombre": "awdwadawd",
-      "Tipo": "Internacional",
-      "Especialidad": "awdawdawdawd",
-      "Calificacion": 1,
-      "Direccion": "awdawdawdawdaw",
-      "Foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/4b/7c/67/el-patio.jpg?w=600&h=600&s=1"
     }
   ],
   "excursiones": [
@@ -322,6 +313,68 @@
       "guideLanguage": "Inglés",
       "price": 135,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrBPSbmtl57uHJEWZmnLVEvBJ0MgSSEGQPyA&s"
+    }
+  ],
+  "alojamientos": [
+    {
+      "id": "2fd9",
+      "nombre": "Hotel La Basílica",
+      "tipo": "Hotel",
+      "calificacion": 5,
+      "precio": 50,
+      "capacidad": "13 Habitaciones",
+      "direccion": "Venezuela N8-26 y Manabi, Quito 170401 Ecuador",
+      "foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/46/1d/07/hotel-la-basilica-quito.jpg?w=1200&h=-1&s=1"
+    },
+    {
+      "nombre": "Friends Hotel & Rooftop",
+      "tipo": "Hotel",
+      "calificacion": 4.7,
+      "precio": 45,
+      "capacidad": "10 Habitaciones",
+      "direccion": "Junin St Oe1-61 y Flores, Quito",
+      "foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/1a/42/93/calle-en-frente-del-hotel.jpg?w=1200&h=-1&s=1",
+      "id": "e5ad"
+    },
+    {
+      "id": "c9b4",
+      "nombre": "Wyndham Garden Quito",
+      "tipo": "Hotel",
+      "calificacion": 4.7,
+      "precio": 68,
+      "capacidad": "15 Habitaciones",
+      "direccion": "Alemania E5 103 Av. La Republica, Quito",
+      "foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/70/af/74/ubicacion-privilegiada.jpg?w=1200&h=-1&s=1"
+    },
+    {
+      "nombre": "La Quinta by Wyndham Quito",
+      "tipo": "Hotel",
+      "calificacion": 4.7,
+      "precio": 60,
+      "capacidad": "16 Habitaciones",
+      "direccion": "Av. de los Shyris 37-53 Naciones Unidas, Quito",
+      "foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/c2/f8/a6/exterior.jpg?w=1100&h=-1&s=1",
+      "id": "05a1"
+    },
+    {
+      "id": "1abb",
+      "nombre": "Eb Hotel by Eurobuilding Quito",
+      "tipo": "Hotel",
+      "calificacion": 4.5,
+      "precio": 50,
+      "capacidad": "18 Habitaciones",
+      "direccion": "Calle 24 de Septiembre S 2-389 Conector Alpachaca, Quito",
+      "foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/00/34/22/getlstd-property-photo.jpg?w=1200&h=-1&s=1"
+    },
+    {
+      "id": "2695",
+      "nombre": "Wyndham Quito Airport",
+      "tipo": "Hotel",
+      "calificacion": 4.5,
+      "precio": 50,
+      "capacidad": "10 Habitaciones",
+      "direccion": "Parroquia Tababela SN Via A Yaruqui, Quito",
+      "foto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/f4/c2/93/exterior.jpg?w=1200&h=-1&s=1"
     }
   ]
 }

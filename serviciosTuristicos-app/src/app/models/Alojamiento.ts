@@ -1,8 +1,10 @@
-// alojamiento.model.ts
 export interface Alojamiento {
-    id: number;
+    id?: number;
     nombre: string;
+    tipo: string;
+    capacidad: string;
+    direccion: string;
+    calificacion: number;
     precio: number;
-    ubicacion: string;
-  }
-  
+    foto: string;
+}  
