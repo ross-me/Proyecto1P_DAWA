@@ -10,6 +10,7 @@ import { ListaRestaurantesComponent } from './components/lista-restaurantes/list
 import { ListaExcursionesComponent } from './components/lista-excursiones/lista-excursiones.component';
 import { CrudExcursionesComponent } from './components/crud-excursiones/crud-excursiones.component';
 import { CrudAlojamientosComponent } from './components/crud-alojamientos/crud-alojamientos.component';
+import { IndexComponent } from './components/index/index.component';
 
 
 export const routes: Routes = [
@@ -23,12 +24,13 @@ export const routes: Routes = [
     {path:"crud-guias-turisticos", component: CrudGuiasTuristicosComponent},
     {path:"crud-restaurantes", component: CrudRestaurantesComponent},
     {path:"crud-excursiones", component: CrudExcursionesComponent},
-    {path:"crud-alojamientos", component: CrudAlojamientosComponent}
+    {path:"crud-alojamientos", component: CrudAlojamientosComponent},
+    {path:"index", component: IndexComponent},
     
     //rutas por defecto
     
-    //{path:"", redirectTo: "index-servicios", pathMatch:'full'}, //no existe
-    //{path:"**", redirectTo: "index-servicios"} //equivocada el "**" representa cualquier otra ruta q 
+    {path:"", redirectTo: "index", pathMatch:'full'}, //no existe
+    {path:"**", redirectTo: "index"} //equivocada el "**" representa cualquier otra ruta q 
     //esté dentro de las colocadas arriba
 
 ];
